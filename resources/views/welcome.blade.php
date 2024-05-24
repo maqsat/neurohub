@@ -415,10 +415,6 @@
                             <input type="text" placeholder="Как ваше состояние">
                         </fieldset>
                         <div class="input-file-row">
-                            <label class="input-file">
-                                <input type="file" name="file[]" multiple>
-                                <div class="attach"><span>Прикрепить анализы</span><span style="font-size: 36px;">+</span></div>
-                            </label>
                             <div class="input-file-list"></div>
                         </div>
                         <button class="btn btn-primary">Отправить</button>
@@ -497,6 +493,8 @@
                 <a href="#" class="text text-sm">Правила сервиса</a>
                 <a href="#" class="text text-sm">Политика конфиденциальности</a>
             </div>
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-7d74b113-21d0-4c28-b7cd-45b2740bb06d" data-elfsight-app-lazy style="position: absolute"></div>
         </div>
     </div>
 </footer>
@@ -512,9 +510,6 @@
 <script src="./assets/js/plugins/notify/notify.min.js"></script>
 <script src="./assets/js/main.js"></script>
 
-
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-7d74b113-21d0-4c28-b7cd-45b2740bb06d" data-elfsight-app-lazy></div>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
