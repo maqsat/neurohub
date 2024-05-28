@@ -72,7 +72,7 @@
         <h2 class="title text-4xl">Состояния, с которыми  NEURO REHAB помогает</h2>
         <div class="cards accordion" id="diseases-accordion">
 
-            @foreach($reasons as $item)
+            @foreach($reasons as $key => $item)
             <div class="item accordion-item">
                 <h2 class="accordion-header" id="disease-{{ $item->id }}">
                     <button class="text text-lg accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#disease-collapse-{{ $item->id }}" aria-expanded="true" aria-controls="disease-collapse-{{ $item->id }}">
@@ -80,7 +80,7 @@
                         <span>{{$item->title}}</span>
                     </button>
                 </h2>
-                <div id="disease-collapse-{{ $item->id }}" class="accordion-collapse collapse show" aria-labelledby="disease-1" data-bs-parent="#diseases-accordion">
+                <div id="disease-collapse-{{ $item->id }}" class="accordion-collapse collapse  @if($key == 0)) show @endif" aria-labelledby="disease-1" data-bs-parent="#diseases-accordion">
                     <div class="text text-sm accordion-body">
                         {{ $item->text }}
                     </div>
@@ -96,7 +96,7 @@
         <h2 class="title text-4xl">Какими методами мы лечим</h2>
         <div class="cards accordion" id="methods-accordion">
 
-            @foreach($methods as $item)
+            @foreach($methods as $key => $item)
 
                 <div class="item accordion-item">
                     <h2 class="accordion-header" id="method-{{ $item->id }}">
@@ -104,7 +104,7 @@
                             {{ $item->title }}
                         </button>
                     </h2>
-                    <div id="method-collapse-{{ $item->id }}" class="accordion-collapse collapse show" aria-labelledby="method-{{ $item->id }}" data-bs-parent="#methods-accordion">
+                    <div id="method-collapse-{{ $item->id }}" class="accordion-collapse collapse @if($key == 0)) show @endif" aria-labelledby="method-{{ $item->id }}" data-bs-parent="#methods-accordion">
                         <div class="accordion-body">
                             <img src="{{ $item->photo }}"  title="{{ $item->title }}"  alt="{{ $item->meta_keywords }}">
                             <a href="/methods/{{ $item->url }}">
