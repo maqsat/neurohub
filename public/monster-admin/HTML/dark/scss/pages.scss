@@ -6,8 +6,8 @@ File: scss
 */
 
 
-/*============================================================== 
- For all pages 
+/*==============================================================
+ For all pages
  ============================================================== */
 
 #main-wrapper {
@@ -59,7 +59,7 @@ File: scss
                     display: none;
                 }
                 b {
-                   
+
                     line-height: 70px;
                     display: inline-block;
                 }
@@ -183,7 +183,7 @@ File: scss
         position: absolute;
         left: 0;
         right: 0;
-        margin: 0 auto;  
+        margin: 0 auto;
         }
     }
 }
@@ -282,7 +282,7 @@ File: scss
         color: $white;
         text-transform: uppercase;
         font-size: 15px;
-        background: $themecolor; 
+        background: $themecolor;
         span {
             float: right;
             cursor: pointer;
@@ -548,7 +548,7 @@ ul#themecolors {
 }
 
 
-/*============================================================== 
+/*==============================================================
  Buttons page
  ============================================================== */
 
@@ -579,7 +579,7 @@ ul#themecolors {
 }
 
 
-/*============================================================== 
+/*==============================================================
  Cards page
  ============================================================== */
 
@@ -665,7 +665,7 @@ ul#themecolors {
 }
 
 
-/*============================================================== 
+/*==============================================================
 Breadcrumb
  ============================================================== */
 
@@ -687,7 +687,7 @@ Breadcrumb
 }
 
 
-/*============================================================== 
+/*==============================================================
  Ui-bootstrap
  ============================================================== */
 
@@ -736,7 +736,7 @@ html body .accordion {
 }
 
 
-/*============================================================== 
+/*==============================================================
  flot chart
  ============================================================== */
 
@@ -760,8 +760,8 @@ html body{
 }
 }
 
-/*============================================================== 
-Easy pie chart 
+/*==============================================================
+Easy pie chart
  ============================================================== */
 
 .chart {
@@ -822,7 +822,7 @@ Easy pie chart
 }
 
 
-/*============================================================== 
+/*==============================================================
 Dashboard1 chart
  ============================================================== */
 
@@ -919,7 +919,7 @@ Dashboard1 chart
 }
 
 
-/*============================================================== 
+/*==============================================================
 Dashboard2 chart
  ============================================================== */
 
@@ -933,7 +933,7 @@ Dashboard2 chart
 }
 
 
-/*============================================================== 
+/*==============================================================
 Dashboard3 chart
  ============================================================== */
 
@@ -991,7 +991,7 @@ Dashboard3 chart
 }
 
 
-/*============================================================== 
+/*==============================================================
 Dashboard4 chart
  ============================================================== */
 
@@ -1024,7 +1024,7 @@ Dashboard4 chart
 }
 
 
-/*============================================================== 
+/*==============================================================
 Widget-data
  ============================================================== */
 
@@ -1033,7 +1033,7 @@ Widget-data
 }
 
 
-/*============================================================== 
+/*==============================================================
 File upload
  ============================================================== */
 
@@ -1117,7 +1117,7 @@ File upload
 }
 
 
-/*============================================================== 
+/*==============================================================
 widget-chart-page product review
  ============================================================== */
 
@@ -1159,7 +1159,7 @@ widget-chart-page product review
 }
 
 
-/*============================================================== 
+/*==============================================================
 Form addons page
 ============================================================== */
 
@@ -1188,7 +1188,7 @@ Form addons page
 .bootstrap-touchspin .input-group-btn-vertical>.btn{
     padding:9px 10px;
 }
-/*============================================================== 
+/*==============================================================
 Form Material page
  ============================================================== */
 /*Material inputs*/
@@ -1233,7 +1233,7 @@ Form Material page
 }
 
 .floating-labels .form-control {
-    
+
     padding: 10px 10px 10px 0;
     display: block;
     border: none;
@@ -1265,7 +1265,7 @@ Form Material page
 
 .floating-labels label {
     color: $bodytext;
-    
+
     position: absolute;
     cursor: auto;
     top: 5px;
@@ -1415,7 +1415,7 @@ Pagination
     li.disabled a{
             background: $light;
             color:$border;
-        
+
         }
 }
 /*******************
@@ -1423,7 +1423,7 @@ Form Dropzone
 ******************/
 .dropzone{
     border:1px dashed $form-brd;
-   
+
     .dz-message{
         padding: 5% 0;
         margin: 0px;
@@ -1564,7 +1564,7 @@ Table-Layout
 .color-table.primary-table thead th {
     background-color: $primary;
     color: $white;
-    
+
 }
 .table-striped tbody tr:nth-of-type(odd){
     background: $light;
@@ -1703,7 +1703,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $primary;
@@ -1720,7 +1720,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $success;
@@ -1737,7 +1737,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $info;
@@ -1754,7 +1754,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $warning;
@@ -1771,7 +1771,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $danger;
@@ -1788,7 +1788,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $inverse;
@@ -1822,7 +1822,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $red;
@@ -1839,7 +1839,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $purple;
@@ -1856,7 +1856,7 @@ Table-Layout
     }
     tbody td {
         border: 0;
-        
+
     }
     tr:hover {
         background-color: $muted;
@@ -1957,12 +1957,12 @@ table.dataTable thead .sorting:after {
     color: white;
     border: 1px solid $primary;
     background-color: $primary;
-    
+
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
     outline: none;
     background-color: $bodytext;
-    
+
 }
 .dataTables_wrapper .dataTables_paginate .ellipsis {
     padding: 0 1em
@@ -1996,11 +1996,11 @@ Table- editable table
             &.active a, &:hover a{
                     background: $info;
                     color:$white;
-                 
+
                 }
         }
     }
-    
+
 }
 /*******************
 Table- Footable
@@ -2058,8 +2058,8 @@ Icon list fontawesom
     transition: all 0.2s;
     transition: font-size .2s;
     vertical-align: middle;
-    
-    
+
+
     transition: all 0.3s ease 0s;
   }
   .col-md-4, .col-3 {
@@ -2072,7 +2072,7 @@ Icon list fontawesom
 }
 .icon-list-demo .div:hover i {
       font-size:2em;
-      
+
     }
 /*******************
 Icon list material icon
@@ -2086,7 +2086,7 @@ Gridstack Dragable portlet
 .grid-stack-item-content {
     background: #fff;
     color: #2b2b2b;
-   
+
     text-align: center;
     font-size: 20px;
 }
@@ -2150,7 +2150,7 @@ Bootstrap Switch
 .onoffswitch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    
+
 }
 .onoffswitch-checkbox {
     display: none;
@@ -2165,7 +2165,7 @@ Bootstrap Switch
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
     display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    font-size: 14px; color: white; 
+    font-size: 14px; color: white;
     box-sizing: border-box;
 }
 .onoffswitch-inner:before {
@@ -2185,13 +2185,13 @@ Bootstrap Switch
     position: absolute; top: 0; bottom: 0;
     right: 56px;
     border: 2px solid $success; border-radius: 20px;
-    transition: all 0.3s ease-in 0s; 
+    transition: all 0.3s ease-in 0s;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
     margin-left: 0;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px; 
+    right: 0px;
 }
 
 /*******************
@@ -2201,7 +2201,7 @@ Date paginator page
     background-color: $themecolor!important;
 }
 .datepaginator-sm, .datepaginator-lg, .datepaginator {
-    
+
     .pagination{
         li{
            a{
@@ -2209,7 +2209,7 @@ Date paginator page
                 height:60px;
                 border: 1px solid $border;
                 float: left;
-                position: relative; 
+                position: relative;
             }
         }
     }
@@ -2249,7 +2249,7 @@ Vertical tabs
           color:$dark;
           margin-bottom:10px;
           border:0px;
-          
+
           border-radius: $radius 0 0 $radius;
         }
       }
@@ -2257,7 +2257,7 @@ Vertical tabs
       display:table-cell;
       padding:20px;
       vertical-align:top;
-    }  
+    }
 }
 .tabs-vertical li .nav-link.active, .tabs-vertical li .nav-link:hover,  .tabs-vertical li .nav-link.active:focus{
   background:$themecolor;
@@ -2584,7 +2584,7 @@ Timeline page
     line-height: 50px;
     color: #fff;
     overflow:hidden;
-    
+
 }
 
 .timeline > li.timeline-inverted > .timeline-panel {
@@ -2689,13 +2689,13 @@ ribbons page
 .ribbon-wrapper-bottom,
 .ribbon-wrapper-right-bottom {
     position: relative;
-    
+
     padding: 50px 15px 15px 15px;
 }
 .ribbon-vwrapper{
     padding: 15px 15px 15px 50px;
     position: relative;
-   
+
 }
 .ribbon-overflow {
     overflow: hidden;
@@ -2703,7 +2703,7 @@ ribbons page
 
 .ribbon-vwrapper-reverse {
     padding: 15px 50px 15px 15px;
-    
+
 }
 
 .ribbon-wrapper-bottom {
@@ -3021,7 +3021,7 @@ ribbons page
 
 .ribbon-danger {
     background: $danger;
-} 
+}
 
 .ribbon-bookmark.ribbon-danger:before {
     border-color: $danger;
@@ -3107,12 +3107,12 @@ session ideal timeout page
         z-index: 100000;
         display: none;
     }
-    
+
     #idletimeout a {
         color: $white;
         font-weight: bold
     }
-    
+
     #idletimeout span {
         font-weight: bold
     }
@@ -3128,8 +3128,8 @@ $color_vivid_tangerine_approx: $themecolor;
 $color_cerulean_approx: #00aeef;
 
 //urls
-$url_0: url(../../assets/images/tooltip/tooltip1.svg);
-$url_1: url(../../assets/images/tooltip/shape1.svg);
+$url_0: url(..//monster-admin/HTML/images/tooltip/tooltip1.svg);
+$url_1: url(..//monster-admin/HTML/images/tooltip/shape1.svg);
 
 //@extend-elements
 //original selectors
@@ -3558,7 +3558,7 @@ Error Page
 .error-box{
   height:100%;
   position:fixed;
-  background:url(../../assets/images/background/error-bg.jpg) no-repeat center center #fff;
+  background:url(..//monster-admin/HTML/images/background/error-bg.jpg) no-repeat center center #fff;
   width:100%;
   .footer{
     width:100%;
@@ -3664,13 +3664,13 @@ Login register and recover password Page
   background-position: center center;
   height:100%;
   width: 100%;
-  padding:10% 0;  
+  padding:10% 0;
   position:fixed;
 }
 .login-box{
   width:400px;
   margin:0 auto;
-  
+
   .footer{
     width:100%;
     left:0px;
@@ -3682,18 +3682,18 @@ Login register and recover password Page
   }
 }
 #recoverform{
-   display:none; 
+   display:none;
 }
 .login-sidebar {
     padding: 0px;
-    
+
     margin-top: 0px;
     .login-box{
         right: 0px;
         position: absolute;
         height: 100%;
     }
-    
+
 }
 /*******************
 FAQs Page
@@ -3759,7 +3759,7 @@ Pricing Page
     border-top:1px solid rgba(120, 130, 140, 0.13);
   }
 }
-.pricing-plan  { 
+.pricing-plan  {
   padding:0 15px;
   .no-padding{ padding:0px;}
 }
@@ -3780,7 +3780,7 @@ chat application Page
 
 .chat-main-box {
     position: relative;
-    
+
     overflow: hidden;
     .chat-left-aside {
         position: relative;
@@ -3844,7 +3844,7 @@ chat application Page
                 height: 80px;
                 padding-right: 180px;
                 &:focus {
-                    border-color: $border; 
+                    border-color: $border;
                 }
             }
             .custom-send {
@@ -3877,10 +3877,10 @@ Email inbox Page
                 border-left:3px solid $themecolor;
             }
             &:hover{
-               
+
             }
         }
-         
+
     }
 }
 .inbox-center{
@@ -3892,7 +3892,7 @@ Email inbox Page
         white-space: nowrap;
     }
     .max-texts{
-       
+
     }
   a{
     color:$bodytext;
@@ -3922,7 +3922,7 @@ Contact app Page
 
 .left-aside {
     position: absolute;
-    
+
     border-right: 1px solid $border;
     padding: 20px;
     width: 250px;
@@ -3932,7 +3932,7 @@ Contact app Page
 .right-aside {
     padding: 20px;
     margin-left: 250px;
-    
+
 }
 .contact-list {
         td {

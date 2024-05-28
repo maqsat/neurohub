@@ -1616,7 +1616,7 @@ html body .waves-notransition {
     width: 100%;
     padding: 30px;
     margin-top: 0px;
-    background: url(../../assets/images/background/megamenubg.jpg) no-repeat right bottom #fff
+    background: url(..//monster-admin/HTML/images/background/megamenubg.jpg) no-repeat right bottom #fff
 }
 .mega-dropdown ul {
     padding: 0px
@@ -1661,7 +1661,7 @@ ul.list-style-none li a:hover {
     color: #747d8a
 }
 .custom-select {
-    background: url(../../assets/images/custom-select.png) right 0.75rem center no-repeat
+    background: url(..//monster-admin/HTML/images/custom-select.png) right 0.75rem center no-repeat
 }
 textarea {
     resize: none
@@ -4498,12 +4498,12 @@ table.dataTable thead .sorting:after {
     margin: -7px 0 0 -15px;
     width: 30px;
     height: 20px;
-    background: url(../../assets/images/tooltip/tooltip1.svg) no-repeat center center;
+    background: url(..//monster-admin/HTML/images/tooltip/tooltip1.svg) no-repeat center center;
     background-size: 100%
 }
 .tooltip-content3 {
     position: absolute;
-    background: url(../../assets/images/tooltip/shape1.svg) no-repeat center bottom;
+    background: url(..//monster-admin/HTML/images/tooltip/shape1.svg) no-repeat center bottom;
     background-size: 100% 100%;
     z-index: 9999;
     width: 200px;
@@ -4673,7 +4673,7 @@ a.mytooltip {
 .error-box {
     height: 100%;
     position: fixed;
-    background: url(../../assets/images/background/error-bg.jpg) no-repeat center center #fff;
+    background: url(..//monster-admin/HTML/images/background/error-bg.jpg) no-repeat center center #fff;
     width: 100%
 }
 .error-box .footer {

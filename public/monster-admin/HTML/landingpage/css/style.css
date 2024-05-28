@@ -47,8 +47,8 @@ Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
 */
-/******************* 
-Global Styles 
+/*******************
+Global Styles
 *******************/
 * {
   outline: none;
@@ -1652,7 +1652,7 @@ Megamenu
   width: 100%;
   padding: 30px;
   margin-top: 0px;
-  background: url(../../assets/images/background/megamenubg.jpg) no-repeat right bottom #fff;
+  background: url(..//monster-admin/HTML/images/background/megamenubg.jpg) no-repeat right bottom #fff;
 }
 
 .mega-dropdown ul {
@@ -1719,7 +1719,7 @@ dropdown-item
 Custom-select
 ******************/
 .custom-select {
-  background: url(../../assets/images/custom-select.png) right 0.75rem center no-repeat;
+  background: url(..//monster-admin/HTML/images/custom-select.png) right 0.75rem center no-repeat;
 }
 
 /*******************
@@ -1863,8 +1863,8 @@ Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
 */
-/*============================================================== 
- For all pages 
+/*==============================================================
+ For all pages
  ============================================================== */
 #main-wrapper {
   width: 100%;
@@ -1883,8 +1883,8 @@ File: scss
   font-weight: 500;
 }
 
-/*============================================================== 
- Index page 
+/*==============================================================
+ Index page
  ============================================================== */
 .topheader {
   padding: 15px 0px;
@@ -2256,14 +2256,14 @@ Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
 */
-/*============================================================== 
- For Laptop & above all (1650px) 
+/*==============================================================
+ For Laptop & above all (1650px)
  ============================================================== */
-/*============================================================== 
- For Laptop & above all (1370px) 
+/*==============================================================
+ For Laptop & above all (1370px)
  ============================================================== */
-/*-- ============================================================== 
- Small Desktop & above all (1024px) 
+/*-- ==============================================================
+ Small Desktop & above all (1024px)
  ============================================================== */
 @media (min-width: 1024px) {
   .testimonial-text {
@@ -2271,8 +2271,8 @@ File: scss
   }
 }
 
-/*-- ============================================================== 
- Ipad & above all(768px) 
+/*-- ==============================================================
+ Ipad & above all(768px)
  ============================================================== */
 @media (min-width: 768px) {
   .dual-bg {
@@ -2289,8 +2289,8 @@ File: scss
   }
 }
 
-/*-- ============================================================== 
- Phone and below ipad(767px) 
+/*-- ==============================================================
+ Phone and below ipad(767px)
  ============================================================== */
 @media (max-width: 767px) {
   .topheader .stylish-nav {

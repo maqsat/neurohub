@@ -29,7 +29,7 @@ $lft: right;
 }
 .dropdown-menu{
     text-align: right;
-    
+
 }
 .dropdown-menu-right{
     left: 0;
@@ -95,7 +95,7 @@ $lft: right;
 }
 .p-l-0 {
     padding-right: 0px !important;
-    padding-left:15px!important; 
+    padding-left:15px!important;
 }
 .p-r-0{
     padding-right: 15px!important;
@@ -140,32 +140,32 @@ $lft: right;
     border-right:1px solid $border!important;
     border-left: 0px !important;
 }
-/*-- ============================================================== 
- Small Desktop & above all (1024px) this is for the page wrapper 
+/*-- ==============================================================
+ Small Desktop & above all (1024px) this is for the page wrapper
  ============================================================== */
 
 @media(min-width:1024px) {
    .page-wrapper{
         margin-right:240px;
         margin-left:0px;
-    }  
+    }
    .footer{
             right: 240px;
             left: 0px;
-      } 
-    
+      }
+
 }
 @media(max-width:1023px) {
    .page-wrapper{
         margin-right:60px;
        margin-left: 0px;
-        
-    }  
+
+    }
    .footer{
             right: 60px;
             left: 0px;
       }
-    
+
 }
 @media(min-width:768px) {
     .mini-sidebar {
@@ -179,10 +179,10 @@ $lft: right;
         }
     }
     .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
-        
+
         left: 0px;
         right: 60px;
-        
+
     }
 }
 @media(max-width:767px) {
@@ -203,14 +203,14 @@ $lft: right;
         right: 0px;
     }
     .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
-        
+
         left: 0px;
         right: 0px;
-        
+
     }
 }
-/*-- ============================================================== 
- This is for tthe sidebar 
+/*-- ==============================================================
+ This is for tthe sidebar
  ============================================================== */
 .sidebar-footer {
     right: 0px;
@@ -230,7 +230,7 @@ $lft: right;
     margin-left: 10px;
     margin-right: 0px;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Header part
  ============================================================== */
 .topbar .top-navbar{
@@ -267,11 +267,11 @@ $lft: right;
     left: auto;
 }
 .topbar .dropdown-menu-right{
-    
+
     left: 0;
     right: auto;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for General Elemtnes
  ============================================================== */
 .modal-footer>:not(:last-child){
@@ -293,13 +293,13 @@ $lft: right;
     border-bottom-right-radius:0px;
 }
 .custom-select{
-    background:  url(../../assets/images/custom-select.png) left 0.75rem center no-repeat;
+    background:  url(..//monster-admin/HTML/images/custom-select.png) left 0.75rem center no-repeat;
     padding: .375rem .75rem .375rem 1.75rem
 }
 .btn-label{
     margin: -6px -14px -6px 12px;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Dahboard 1
  ============================================================== */
 th{
@@ -312,7 +312,7 @@ th{
         border-left: 0px!important;
         border-right: 4px solid $themecolor;
     }
-    
+
 }
 .todo-list li .assignedto{
     padding: 0 27px 0 0px;
@@ -344,7 +344,7 @@ th{
       padding-right: 5px;
     &::before {
       right: 0px;
-      top:3px;    
+      top:3px;
       margin-right: -17px;
       padding-right: 3px;
     }
@@ -353,11 +353,11 @@ th{
         top:8px;
       margin-right: -17px;
       padding-right: 3px;
-     
+
     }
   }
  }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Dahboard 2
  ============================================================== */
 .steamline{
@@ -383,7 +383,7 @@ th{
 .feeds li span{
     float: left;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Dahboard 3
  ============================================================== */
 .profiletimeline{
@@ -404,7 +404,7 @@ th{
     margin-left: 0px;
     margin-right: 5px;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for chat page
  ============================================================== */
 .chat-main-box{
@@ -413,7 +413,7 @@ th{
       border-right: 0px;
       border-left: 1px solid $border;
    }
-}   
+}
 .right-aside{
     margin-left: 0px;
     margin-right: 250px;
@@ -422,7 +422,7 @@ th{
     border-left: 1px solid $border;
     border-right: 0px;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Tab page
  ============================================================== */
 .vtabs .tabs-vertical{
@@ -440,7 +440,7 @@ th{
     margin-left: -1px;
     border-radius: 0 ;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Ribbon page
  ============================================================== */
 .ribbon-vertical-r {
@@ -456,7 +456,7 @@ th{
 .ribbon-vwrapper{
     padding: 15px 50px 15px 15px;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Form page
  ============================================================== */
 .custom-control{
@@ -501,7 +501,7 @@ th{
     border-top-left-radius: 0rem;
 }
 
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Form addons page
  ============================================================== */
 .bootstrap-select>.dropdown-toggle{
@@ -531,7 +531,7 @@ th{
 .icheck-list{
    float: right;
     padding-left: 50px;
-    padding-right: 0px;     
+    padding-right: 0px;
 }
 ul.wysihtml5-toolbar > li{
     float: right;
@@ -539,7 +539,7 @@ ul.wysihtml5-toolbar > li{
 .wysihtml5-sandbox{
     direction: rtl;
 }
-/*-- ============================================================== 
+/*-- ==============================================================
  This is for Form wizrd page
  ============================================================== */
 .wizard-content .wizard>.steps>ul>li:after{

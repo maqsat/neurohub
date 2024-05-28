@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +16,18 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IndexController::class, 'welcome'])->name('welcome');
+Route::get('/neurorehub', [IndexController::class, 'landing'])->name('landing');
+Route::get('/all-methods', [IndexController::class, 'allMethods'])->name('all-methods');
+Route::get('/methods/{slug}', [IndexController::class, 'showMethods'])->name('all-methods');
 
-Route::get('/neurorehub', function () {
-    return view('landing');
-});
+
 
 require __DIR__.'/auth.php';
 
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
+    Route::resource('/posts',PostController::class);
 
 });

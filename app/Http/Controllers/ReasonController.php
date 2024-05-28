@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reason;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ReasonController extends Controller
 {
@@ -14,7 +15,8 @@ class ReasonController extends Controller
      */
     public function index()
     {
-        //
+        $list = Reason::paginate(30);
+        return view('reason.index', compact('list'));
     }
 
     /**
@@ -24,7 +26,7 @@ class ReasonController extends Controller
      */
     public function create()
     {
-        //
+        return view('reason.create');
     }
 
     /**
@@ -35,7 +37,34 @@ class ReasonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'text' => 'required',
+            'sort' => 'required',
+            'photo' => 'required',
+            'meta_keywords' => 'required',
+            'meta_description' => 'required',
+        ]);
+
+        if ($request->hasFile('photo')) {
+            $tmp_path = date('Y')."/".date('m')."/".date('d')."/".$request->photo->getFilename().'.'.$request->photo->getClientOriginalExtension();
+            $path = $request->photo->storeAs('public/images', $tmp_path);
+            $request->photo = str_replace("public", "storage", $path);
+        }
+
+
+        Reason::create([
+            'title' => $request->title,
+            'url' => Str::slug($request->title, '-'),
+            'text' => $request->text,
+            'sort' => $request->sort,
+            'photo' => $request->photo,
+            'meta_keywords' => $request->meta_keywords,
+            'meta_description' => $request->meta_description,
+        ]);
+
+
+        return redirect('/reasons')->with('status', 'Успешно добавлено');
     }
 
     /**
@@ -57,7 +86,7 @@ class ReasonController extends Controller
      */
     public function edit(Reason $reason)
     {
-        //
+        return view('reason.edit', compact('reason'));
     }
 
     /**
@@ -69,7 +98,34 @@ class ReasonController extends Controller
      */
     public function update(Request $request, Reason $reason)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'text' => 'required',
+            'photo' => 'required',
+            'meta_keywords' => 'required',
+            'meta_description' => 'required',
+        ]);
+
+        if ($request->hasFile('photo')) {
+            $tmp_path = date('Y')."/".date('m')."/".date('d')."/".$request->photo->getFilename().'.'.$request->photo->getClientOriginalExtension();
+            $path = $request->photo->storeAs('public/images', $tmp_path);
+            $request->photo = str_replace("public", "storage", $path);
+        }
+
+
+        $reason->update([
+            'title' => $request->title,
+            'url' => Str::slug($request->title, '-'),
+            'text' => $request->text,
+            'sort' => 'required',
+            'sort' => $request->sort,
+            'photo' => $request->photo,
+            'meta_keywords' => $request->meta_keywords,
+            'meta_description' => $request->meta_description,
+        ]);
+
+
+        return redirect()->back()->with('status', 'Успешно добавлено');
     }
 
     /**
