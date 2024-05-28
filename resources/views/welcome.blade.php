@@ -75,12 +75,12 @@
             @foreach($reasons as $key => $item)
             <div class="item accordion-item">
                 <h2 class="accordion-header" id="disease-{{ $item->id }}">
-                    <button class="text text-lg accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#disease-collapse-{{ $item->id }}" aria-expanded="true" aria-controls="disease-collapse-{{ $item->id }}">
+                    <button class="text text-lg accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#disease-collapse-{{ $item->id }}" aria-expanded="@if($key == 0) true @else false @endif" aria-controls="disease-collapse-{{ $item->id }}">
                         <img src="/{{$item->photo}}" alt="">
                         <span>{{$item->title}}</span>
                     </button>
                 </h2>
-                <div id="disease-collapse-{{ $item->id }}" class="accordion-collapse collapse  @if($key == 0)) show @endif" aria-labelledby="disease-1" data-bs-parent="#diseases-accordion">
+                <div id="disease-collapse-{{ $item->id }}" class="accordion-collapse collapse  @if($key == 0) show @endif" aria-labelledby="disease-1" data-bs-parent="#diseases-accordion">
                     <div class="text text-sm accordion-body">
                         {{ $item->text }}
                     </div>
@@ -100,11 +100,11 @@
 
                 <div class="item accordion-item">
                     <h2 class="accordion-header" id="method-{{ $item->id }}">
-                        <button class="text text-lg accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#method-collapse-{{ $item->id }}" aria-expanded="true" aria-controls="method-collapse-{{ $item->id }}">
+                        <button class="text text-lg accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#method-collapse-{{ $item->id }}" aria-expanded="@if($key == 0) true @else false @endif" aria-controls="method-collapse-{{ $item->id }}">
                             {{ $item->title }}
                         </button>
                     </h2>
-                    <div id="method-collapse-{{ $item->id }}" class="accordion-collapse collapse @if($key == 0)) show @endif" aria-labelledby="method-{{ $item->id }}" data-bs-parent="#methods-accordion">
+                    <div id="method-collapse-{{ $item->id }}" class="accordion-collapse collapse @if($key == 0) show @endif" aria-labelledby="method-{{ $item->id }}" data-bs-parent="#methods-accordion">
                         <div class="accordion-body">
                             <img src="{{ $item->photo }}"  title="{{ $item->title }}"  alt="{{ $item->meta_keywords }}">
                             <a href="/methods/{{ $item->url }}">
