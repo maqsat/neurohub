@@ -29,20 +29,24 @@
         </div>
     </div>
 </section>
-<section class="image" id="image">
-    <div class="container">
-        <iframe width="100%" height="415" src="https://www.youtube.com/embed/Jw01Rc62Gm8?si=11rvrpYSvN2pxMCr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-</section>
+
 <section class="about" id="about">
     <div class="container">
-        <div class="images">
-            <img src="./assets/img/doctor-1.png" alt="" class="-doctor">
-            <img src="./assets/img/univer-logo.png" alt="" class="-univer">
+        <div class="about-header">
+            <div class="video">
+                <img src="./assets/img/doctor-0.jpg" alt="">
+                <button class="play js-modal-btn" data-video-id="mR0ZQ58UjpY?si=aih40e3MtSuWb68d">
+                    <span class="icon icon-play"></span>
+                    <div class="btn-play">Посмотреть видео</div>
+                </button>
+            </div>
+            <div class="info">
+                <h2 class="title text-4xl">Почему выбирают нас?</h2>
+                <p class="subtitle text-base">Основатель клиники Тюлебаева Арна Берикбековна училась у лучших ученых реабилитологов США, получив степень магистра реабилитационных наук. </p>
+                <p class="quote text-base">Миссия клиники Neuro Rehab - внедрить лучшие западные методы и принципы реабилитации в Алмате, основанные на доказательной эффективности и безопасности.</p>
+            </div>
         </div>
-        <h2 class="title text-4xl">Почему выбирают нас?</h2>
-        <p class="subtitle text-base">Основатель клиники Тюлебаева Арна Берикбековна училась у лучших ученых реабилитологов США, получив степень магистра реабилитационных наук. </p>
-        <p class="quote text-base">Миссия клиники Neuro Rehab - внедрить лучшие западные методы и принципы реабилитации в Алмате, основанные на доказательной эффективности и безопасности.</p>
+
         <div class="about-cards">
             <div class="card">
                 <span class="text text-5xl">1</span>
@@ -67,6 +71,7 @@
         </div>
     </div>
 </section>
+
 <section class="diseases" id="diseases">
     <div class="container">
         <h2 class="title text-4xl">Состояния, с которыми  NEURO REHAB помогает</h2>
@@ -91,6 +96,7 @@
         </div>
     </div>
 </section>
+
 <section class="methods" id="methods">
     <div class="container">
         <h2 class="title text-4xl">Какими методами мы лечим</h2>
@@ -121,22 +127,21 @@
 
         </div>
 
-        <a href="/all-methods" class="btn btn-primary">Посмотреть все методы</a>
+        <a href="/all-methods" class="btn btn-primary mt-4">Посмотреть все методы</a>
     </div>
 </section>
+
 <section class="doctors" id="doctors">
     <div class="container">
         <h2 class="title text-4xl">Наши врачи</h2>
         <p class="subtitle text-sm">Вы можете записаться на консультацию с нашими специалистами</p>
         <div class="doctors-cards">
             <div class="card">
-                <p class="name text-2xl">Тюлебаева Арна Берикбековна</p>
-                <p class="post text-base">Невролог, Магистр реабилитационных наук (University of Pittsburgh, USA)</p>
                 <div class="info">
                     <img src="./assets/img/doctor-1.png" alt="">
                     <div class="price">
-                        <p class="text text-xs text-uppercase">Стоимость консультации</p>
-                        <p class="text text-2xl">25 000 〒</p>
+                        <p class="text text-xs text-uppercase">Тюлебаева Арна Берикбековна</p>
+                        <p class="text text-2xl">Невролог, Магистр реабилитационных наук (University of Pittsburgh, USA)</p>
                         <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%20Арне%20Берикбековне" class="btn btn-primary"  target="_blank">Записаться на прием</a>
                     </div>
                 </div>
@@ -147,13 +152,11 @@
             </div>
 
             <div class="card">
-                <p class="name text-2xl">Калдыбаева Айтолкын Сериковна</p>
-                <p class="post text-base">Врач-реабилитолог</p>
                 <div class="info">
                     <img src="./assets/img/doctor-2.png" alt="">
                     <div class="price">
-                        <p class="text text-xs text-uppercase">Стоимость консультации</p>
-                        <p class="text text-2xl">15 000 〒</p>
+                        <p class="text text-xs text-uppercase">Калдыбаева Айтолкын Сериковна</p>
+                        <p class="text text-2xl">Врач-реабилитолог, Победительница Международного форума Asfen.Forum</p>
                         <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%Айтолкын%20Сериковне" class="btn btn-primary" target="_blank">Записаться на прием</a>
                     </div>
                 </div>
@@ -164,24 +167,23 @@
             </div>
 
             <div class="card">
-                <p class="name text-2xl">Ардак</p>
-                <p class="post text-base">Врач-реабилитолог</p>
                 <div class="info">
-                    <img src="" alt="">
+                    <img src="https://static-00.iconduck.com/assets.00/avatar-default-icon-2048x2048-h6w375ur.png" alt="">
                     <div class="price">
-                        <p class="text text-xs text-uppercase">Стоимость консультации</p>
-                        <p class="text text-2xl">15 000 〒</p>
+                        <p class="text text-xs text-uppercase">Куанышбаева Ардак Теналбайкызы</p>
+                        <p class="text text-2xl">Врач-Инструктор</p>
                         <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%Айтолкын%20Сериковне" class="btn btn-primary" target="_blank">Записаться на прием</a>
                     </div>
                 </div>
                 <div class="description text-xs">
-                    <p>Айтолкын Сериковна практикующий врач-реабилитолог, в работе руководствуется принципами доказательной медицины, постоянно совершенствует свои знания и повышает квалификацию в научной и клинической практике. Принимает взрослых и детей с болями в спине, в плече, с головокружением, состояниями после травм, грыж, операций и пост-инсультных пациентов. Победительница Международного форума “Asfen.Forum, новое поколение-2023” в секции: Реабилитология и спортивная медицина</p>
+                    <p>КазНМУ им С. Д. Асфендиярова + множество зарубежных стажировок, мастер классов и выступлений на конференциях</p>
                 </div>
                 <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%Айтолкын%20Сериковне" class="btn btn-primary" target="_blank">Записаться на прием</a>
             </div>
         </div>
     </div>
 </section>
+
 <section class="reviews" id="reviews">
     <div class="container">
         <h2 class="title text-4xl">Отзывы наших пациентов</h2>
@@ -232,6 +234,7 @@
         </div>
     </div>
 </section>
+
 <section class="gallery" id="gallery">
     <div class="container">
         <h2 class="title text-4xl">Наша клиника</h2>
@@ -259,42 +262,22 @@
         <h2 class="title text-4xl">Частые вопросы</h2>
         <div class="wrapper">
             <div class="faq-cards accordion" id="faq-accordion">
-                <div class="item accordion-item">
-                    <h2 class="accordion-header" id="faq-heading-1">
-                        <button class="text-lg accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="true" aria-controls="faq-collapse-1">
-                            Чего ожидать от реабилитации?
-                        </button>
-                    </h2>
-                    <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#faq-accordion">
-                        <div class="text-xs accordion-body">
-                            Реабилитация — это комплексный процесс, направленный на максимальное восстановление функций и улучшение качества жизни пациента. Важно иметь реалистичные ожидания, терпение и активно сотрудничать с медицинскими специалистами для достижения наилучших результатов.
+
+                @foreach($question_answers as $key => $item)
+                    <div class="item accordion-item">
+                        <h2 class="accordion-header" id="faq-heading-{{$item->id}}">
+                            <button class="text-lg accordion-button @if($key != 2) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-{{$item->id}}" aria-expanded="@if($key == 3) true @else false @endif" aria-controls="faq-collapse-{{$item->id}}">
+                                {{ $item->question }}
+                            </button>
+                        </h2>
+                        <div id="faq-collapse-{{$item->id}}" class="accordion-collapse collapse @if($key == 2) show @endif" aria-labelledby="faq-heading-{{$item->id}}" data-bs-parent="#faq-accordion">
+                            <div class="text-xs accordion-body">
+                                {{ $item->answer }}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item accordion-item">
-                    <h2 class="accordion-header" id="faq-heading-2">
-                        <button class="text-lg accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
-                            Сколько времени нужно на восстановление после инсульта?
-                        </button>
-                    </h2>
-                    <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faq-accordion">
-                        <div class="text-xs accordion-body">
-                            Время восстановления после инсульта может сильно варьироваться в зависимости от множества факторов, включая тяжесть инсульта, его тип, возраст пациента, общее состояние здоровья и наличие сопутствующих заболеваний.
-                        </div>
-                    </div>
-                </div>
-                <div class="item accordion-item">
-                    <h2 class="accordion-header" id="faq-heading-3">
-                        <button class="text-lg accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="true" aria-controls="faq-collapse-3">
-                            Что нужно взять с собой на реабилитацию?
-                        </button>
-                    </h2>
-                    <div id="faq-collapse-3" class="accordion-collapse collapse show" aria-labelledby="faq-heading-3" data-bs-parent="#faq-accordion">
-                        <div class="text-xs accordion-body">
-                            Уважаемые пациенты,  Мы рады приветствовать вас в нашем реабилитационном центре. Для вашего удобства и комфорта мы полностью обеспечиваем все необходимые условия для вашего пребывания и реабилитации. Вам не нужно беспокоиться о сборе вещей, так как мы предоставляем все необходимое.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </div>

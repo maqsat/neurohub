@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/assets/css/plugins/fontawesome/all.min.css">
     <link rel="stylesheet" href="/assets/css/plugins/lightgallery/lightgallery-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/plugins/images/loading.gif">
+    <link rel="stylesheet" href="/assets/css/plugins/appleple-modal-video/modal-video.min.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
 </head>
 <body>
 <header class="header">
@@ -77,18 +79,19 @@
             </div>
             <div class="right-block">
                 <div class="card">
-                    <form action="" class="form">
+                    <form action="{{url('order-create')}}" method="POST" class="form-horizontal form-material" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                         <fieldset class="input-form">
                             <legend>Номер телефона</legend>
-                            <input type="phone" placeholder="Телефон" id="phone">
+                            <input type="phone" placeholder="Телефон" id="phone" name="phone">
                         </fieldset>
                         <fieldset class="input-form">
                             <legend>Ваше имя</legend>
-                            <input type="phone" placeholder="Введите имя" id="name">
+                            <input type="phone" placeholder="Введите имя" id="name" name="name">
                         </fieldset>
                         <fieldset class="input-form">
                             <legend>Опишите ситуацию</legend>
-                            <input type="text" placeholder="Как ваше состояние">
+                            <input type="text" name="text" placeholder="Как ваше состояние">
                         </fieldset>
                         <div class="input-file-row">
                             <div class="input-file-list"></div>
@@ -184,6 +187,7 @@
 <script src="/assets/js/plugins/swiper/swiper-bundle.min.js"></script>
 <script src="/assets/js/plugins/bootstrap/bootstrap.min.js"></script>
 <script src="/assets/js/plugins/jquery/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/plugins/appleple-modal-video/jquery-modal-video.min.js"></script>
 <script src="/assets/js/plugins/imask/imask.min.js"></script>
 <script src="/assets/js/plugins/notify/notify.min.js"></script>
 <script src="/assets/js/main.js"></script>

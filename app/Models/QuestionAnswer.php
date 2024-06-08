@@ -9,4 +9,6 @@ class QuestionAnswer extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    protected $table = 'question_answers';
 }

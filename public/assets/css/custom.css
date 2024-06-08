@@ -1,0 +1,35 @@
+@media (min-width: 991px) {
+    .methods .accordion {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+
+    .doctors-cards {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+
+    .doctors-cards .card .name {
+        font-size: 24px !important;
+    }
+
+    .doctors-cards .card .post {
+        font-size: 18px !important;
+    }
+
+    .doctors-cards .card .info img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .price .btn {
+        font-size: 16px !important;
+    }
+
+    .doctors-cards .card .info .price .text-2xl {
+        font-size: 14px !important;
+    }
+}
+
+
+.methods a{
+    text-decoration: none;
+}

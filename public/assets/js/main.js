@@ -130,6 +130,7 @@ IMask(
     }
  )
 
+ $(".js-modal-btn").modalVideo();
 
  var dt = new DataTransfer();
  

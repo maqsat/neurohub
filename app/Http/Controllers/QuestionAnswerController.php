@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\QuestionAnswer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class QuestionAnswerController extends Controller
 {
@@ -14,7 +15,8 @@ class QuestionAnswerController extends Controller
      */
     public function index()
     {
-        //
+        $list = QuestionAnswer::paginate(30);
+        return view('question_answers.index', compact('list'));
     }
 
     /**
@@ -24,7 +26,7 @@ class QuestionAnswerController extends Controller
      */
     public function create()
     {
-        //
+        return view('question_answers.create');
     }
 
     /**
@@ -35,7 +37,21 @@ class QuestionAnswerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'question' => 'required',
+            'answer' => 'required',
+            'sort' => 'required',
+        ]);
+
+
+        QuestionAnswer::create([
+            'question' => $request->question,
+            'answer' => $request->answer,
+            'sort' => $request->sort,
+        ]);
+
+
+        return redirect('/question_answers')->with('status', 'Успешно добавлено');
     }
 
     /**
@@ -57,7 +73,7 @@ class QuestionAnswerController extends Controller
      */
     public function edit(QuestionAnswer $questionAnswer)
     {
-        //
+        return view('question_answers.edit', compact('questionAnswer'));
     }
 
     /**
@@ -69,7 +85,21 @@ class QuestionAnswerController extends Controller
      */
     public function update(Request $request, QuestionAnswer $questionAnswer)
     {
-        //
+        $request->validate([
+            'question' => 'required',
+            'answer' => 'required',
+            'sort' => 'required',
+        ]);
+
+
+        $questionAnswer->update([
+            'question' => $request->question,
+            'answer' => $request->answer,
+            'sort' => $request->sort,
+        ]);
+
+
+        return redirect('/question_answers')->with('status', 'Успешно добавлено');
     }
 
     /**

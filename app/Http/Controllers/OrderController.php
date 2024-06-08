@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\QuestionAnswer;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -14,7 +15,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $list = Order::orderBy('created_at','asc')->paginate(30);
+        return view('orders.index', compact('list'));
     }
 
     /**
