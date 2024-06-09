@@ -19,7 +19,11 @@ class IndexController extends Controller
 
     public function landing()
     {
-        return view('landing');
+        $methods = Post::orderBy('sort')->where('type',1)->get();
+        $reasons = Post::orderBy('sort')->where('type',2)->take(6)->get();
+
+        return view('landing', compact('methods','reasons'));
+
     }
 
     public function allMethods()
