@@ -70,7 +70,8 @@
 
     @yield('content')
 
-    <section class="start" id="start">
+    @if(Route::current()->getName() != 'landing')
+        <section class="start" id="start">
         <div class="container">
             <div class="left-block">
                 <h2 class="title text-4xl">Начните реабилитацию сейчас</h2>
@@ -102,6 +103,7 @@
             </div>
         </div>
     </section>
+    @endif
 </main>
 
 
@@ -191,6 +193,7 @@
 <script src="/assets/js/plugins/imask/imask.min.js"></script>
 <script src="/assets/js/plugins/notify/notify.min.js"></script>
 <script src="/assets/js/main.js"></script>
+
 
 
 <!-- Yandex.Metrika counter -->

@@ -27,6 +27,169 @@
     .doctors-cards .card .info .price .text-2xl {
         font-size: 14px !important;
     }
+
+    .pricing .subtitle {
+        width: 50%;
+    }
+    .pricing-cards {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .pricing-cards .card {
+        border-radius: 16px !important;
+        padding: 24px !important;
+        border: 0 !important;
+    }
+
+    .pricing-cards .card > .text-5xl {
+        font-size: 32px !important;
+        margin-bottom: 8px;
+    }
+    .pricing-cards .card > .text-2xl {
+        font-size: 36px !important;
+        margin-bottom: 8px;
+    }
+    .pricing-cards .card > .text-sm {
+        font-size: 18px !important;
+        margin-bottom: 8px;
+    }
+    .pricing-cards .card .btn {
+        width: -moz-fit-content;
+        width: fit-content;
+        font-size: 18px !important;
+    }
+
+    .start .container {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+    .start .container .left-block, .start .container .right-block {
+        width: 100%;
+    }
+    .start .card {
+        padding: 16px;
+        border: none;
+        border-radius: 12px;
+    }
+    .start .card .input-form {
+        border: 1px solid #C19F80;
+        padding: 7px 16px 14px 16px;
+        margin: auto;
+        border-radius: 4px;
+    }
+    .start .card .input-form legend {
+        width: auto;
+        float: none;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 0 8px;
+        margin-bottom: 0;
+    }
+    .start .card .input-form + .input-form {
+        margin-top: 8px;
+    }
+    .start .card .input-form input, .start .card .input-form textarea {
+        width: 100%;
+        border: 0;
+        outline: none;
+        resize: none;
+    }
+    .start .card .input-file {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    .start .card .input-file-row {
+        display: flex;
+        flex-direction: column;
+        margin: 8px 0;
+    }
+    .start .card .input-file .attach {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        font-size: 16px;
+        vertical-align: middle;
+        color: var(--primary);
+        background-color: transparent;
+        line-height: 22px;
+        padding: 12px 0px;
+        box-sizing: border-box;
+        border-bottom: 1px solid var(--primary);
+        margin: 0;
+        transition: background-color 0.2s;
+        width: 100%;
+    }
+    .start .card .input-file input[type=file] {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        display: block;
+        width: 0;
+        height: 0;
+    }
+    .start .card .input-file input[type=file]:focus + span {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    .start .card .input-file input[type=file]:disabled + span {
+        background-color: #eee;
+    }
+    .start .card .input-file-list {
+        padding: 10px 0;
+    }
+    .start .card .input-file-list-item {
+        margin-bottom: 10px;
+    }
+    .start .card .input-file-list-remove {
+        color: red;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 5px;
+    }
+    .start .map {
+        border-top: 0.5px solid #ddd;
+        padding-top: 16px;
+    }
+    .start .map .caption {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+    .start .map .caption .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .start .map .caption .text p {
+        margin-bottom: 0;
+    }
+    .start .map .caption .icon-2gis {
+        content: "";
+        background-image: url("../img/2gis-logo.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 44px;
+        flex: none;
+        background-size: cover;
+    }
+    .start .map .frame {
+        width: 100%;
+        height: 100%;
+        padding-top: 56%;
+        border-radius: 24px;
+        overflow: hidden;
+        margin-top: 16px;
+    }
 }
 
 
