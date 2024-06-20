@@ -168,7 +168,7 @@
 
             <div class="card">
                 <div class="info">
-                    <img src="https://static-00.iconduck.com/assets.00/avatar-default-icon-2048x2048-h6w375ur.png" alt="">
+                    <img src="./assets/img/doctor-3.jpeg" alt="">
                     <div class="price">
                         <p class="text text-xs text-uppercase">Куанышбаева Ардак Теналбайкызы</p>
                         <p class="text text-2xl">Врач-Инструктор</p>

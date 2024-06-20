@@ -51,27 +51,342 @@
     </section>
 
     <section class="diseases" id="diseases">
-    <div class="container">
-        <h2 class="title text-4xl">Когда к нам обращаться</h2>
-        <div class="cards accordion" id="diseases-accordion">
-            @foreach($reasons as $key => $item)
-                <div class="item accordion-item">
-                    <h2 class="accordion-header" id="disease-{{ $item->id }}">
-                        <button class="text text-lg accordion-button  @if($key != 0) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#disease-collapse-{{ $item->id }}" aria-expanded="@if($key == 0) true @else false @endif" aria-controls="disease-collapse-{{ $item->id }}">
-                            <img src="/{{$item->photo}}" alt="">
-                            <span>{{$item->title}}</span>
-                        </button>
-                    </h2>
-                    <div id="disease-collapse-{{ $item->id }}" class="accordion-collapse collapse  @if($key == 0) show @endif" aria-labelledby="disease-1" data-bs-parent="#diseases-accordion">
-                        <div class="text text-sm accordion-body">
-                            {{ $item->text }}
+        <div class="container">
+            <h2 class="title text-4xl">Когда к нам обращаться</h2>
+            <!-- <div class="diseases-structure">
+                <div class="image">
+                    <img src="./assets/img/human.jpg" alt="">
+                </div>
+            </div> -->
+            <div class="scheme">
+                <div class="object">
+                    <button class="helper is-1" data-modal="popup-1">
+                        <div class="content">
+                            <div class="caption">Головокружения</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-2" data-modal="popup-2">
+                        <div class="content">
+                            <div class="caption">Тренировка баланса</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-3" data-modal="popup-3">
+                        <div class="content">
+                            <div class="caption">До и после эндопротезирования</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-4" data-modal="popup-4">
+                        <div class="content">
+                            <div class="caption">Последствия травм</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-9" data-modal="popup-9">
+                        <div class="content">
+                            <div class="caption">После инсультов</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-5 is-right" data-modal="popup-5">
+                        <div class="content">
+                            <div class="caption">Боль в шее</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-6 is-right" data-modal="popup-6">
+                        <div class="content">
+                            <div class="caption">Боли в спине</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-7 is-right" data-modal="popup-7">
+                        <div class="content">
+                            <div class="caption">Грыжи и протрузии позвоночника</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-8 is-right" data-modal="popup-8">
+                        <div class="content">
+                            <div class="caption">Боли и онемения в конечностях</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="helper is-10 is-right" data-modal="popup-10">
+                        <div class="content">
+                            <div class="caption">Боли и ограничения движения в суставах</div>
+                            <div class="toggler"></div>
+                            <div class="pointer">
+                                <div class="pulsar"></div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div class="popups">
+                    <div class="popup" id="popup-1">
+                        <div class="close" data-modal="popup-1">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">Головокружения</div>
+                                <div class="text">
+                                    Часто сопровождается с потерей сознания, тошнотой, рвотой, скачками артериального давления. Головокружение чаще всего провоцирует шейный остеохондроз. Восстановление тонуса соответствующих мышц с помощью терапии, надежно и надолго избавят вас от болей такого рода.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-2">
+                        <div class="close" data-modal="popup-2">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">Тренировка баланса</div>
+                                <div class="text">
+                                    Упражнения на баланс — один из лучших способов развития проприоцепции. Проприоцепцию можно охарактеризовать как «чувство тела», способность мозга воспринимать относительное положение и движение различных частей тела. Благодаря проприоцепии мы знаем, как находимся в пространстве даже когда наши глаза закрыты. Тренировки на баланс — это защита от травм, что особенно важно для людей, ведущих активный образ жизни. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-3">
+                        <div class="close" data-modal="popup-3">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">До и после эндопротезирования</div>
+                                <div class="text">
+                                    Эндопротезирование сустава – это замена поврежденного сустава на протез из современных материалов. Эндопротез, который устанавливается пациенту, полностью повторяет форму и структуру нормального сустава и выполняет все положенные ему функции. Врачи Nuro Rehab Clinic обучат пациента ограничениям, связанным с эндопротезированием: как садиться в кровати, лежать, переворачиваться, проводить гигиенические процедуры. Ускорить восстановление после эндопротезирования поможет индивидуальная программа реабилитации, тщательно составленная лечащим реабилитологом.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-4">
+                        <div class="close" data-modal="popup-4">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">Последствия травм</div>
+                                <div class="text">
+                                    Реабилитация после травм направлена на: постепенное восстановление двигательной активности снижение болевого синдрома ускорение регенерации поврежденных тканей. Реабилитация после травм требует комплексного подхода, поскольку необходимо устранить посттравматические отеки, восстановить движение и мышечную силу. А самое главное - важно обучить правильному передвижению и самообслуживанию, использованию технических средств реабилитации.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-5">
+                        <div class="close" data-modal="popup-5">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">Боль в шее</div>
+                                <div class="text">
+                                    Основными симптомами является головная боль, болезненные ощущения в шее, головокружение. К сожалению, диагностика усложняется тем, что эти симптомы присущи огромному количеству заболеваний, так что необходимо проводить дополнительные тесты для уточнения.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-6">
+                        <div class="close" data-modal="popup-6">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">Боли в спине</div>
+                                <div class="text">
+                                    Опасность болей в спине состоит в том, что при самых различных заболеваниях позвоночника в патологический процесс непременно вовлекаются мышцы и многие внутренние органы. Например, для шейного отдела позвоночника осложнениями заболевания могут быть сильные головные боли, шум в ушах, нарушения зрения, онемение рук, ограничение подвижности. Повреждение позвонков может сказаться на работе головного мозга, нарушается кровообращение.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-7">
+                        <div class="close" data-modal="popup-7">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">Грыжи и протрузии позвоночника</div>
+                                <div class="text">
+                                    Протрузия — этап естественного процесса старения диска. Грыжа — следующая стадия дегенерации диска. Лечение протрузии диска включает устранение нагрузки на диск, его высвобождение из зажатого, сплющенного состояния и улучшение кровоснабжения и питания тканей диска. Первое достигается с помощью точечного массажа, мануальной терапии, иглоукалывания и других процедур.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-8">
+                        <div class="close" data-modal="popup-8">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">Боли и онемения в конечностях</div>
+                                <div class="text">
+                                    Чаще всего, небольшое онемение, покалывание в конечностях есть результат короткого сдавливания кровеносных сосудов срединного нерва. После того как мы сменим позу, деятельность нервного волокна нормализуется, а все неприятные моменты исчезают. Но если после смены деятельности онемение не проходит и возникает достаточно часто, это может являться симптомом серьезного заболевания. Такая ситуация требует безотлагательного обращения за медицинской помощью.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-9">
+                        <div class="close" data-modal="popup-9">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">После инсультов</div>
+                                <div class="text">
+                                    Инсульт – острое нарушение мозгового кровообращения (ОНМК), которое продолжается более 24 часов. Поражение мозга чревато потерей работоспособности, депрессивными состояниями, прикованностью к постели. Реабилитация после инсультов очень важна: она снижает риск повторного приступа, позволяет восстановить движение, речь, память. Скорость и степень восстановления сильно зависят от общего здоровья пациента, типа инсульта, его тяжести, поврежденной области мозга, от быстроты и качества медицинского вмешательства.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup-10">
+                        <div class="close" data-modal="popup-10">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1612_9)">
+                                    <path d="M0 0L25 25M0 25L25 0" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1612_9">
+                                        <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="-header"></div>
+                            <div class="-body">
+                                <div class="caption">Боли и ограничения движения в суставах</div>
+                                <div class="text">
+                                    Боль возникает преимущественно при движении, характер боли острый. Болевые ощущение чаще возникают в ночное время, не давая больному нормально выспаться.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
-    </div>
     </section>
+
 
     <section class="methods" id="methods">
     <div class="container">

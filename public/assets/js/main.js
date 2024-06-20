@@ -160,3 +160,33 @@ function removeFilesItem(target){
 	}
 	input[0].files = dt.files;  
 }
+
+
+const popupBtn = document.querySelectorAll('.helper');
+
+popupBtn.forEach(button => {
+    button.addEventListener('click', function() {
+        const popupId = button.getAttribute('data-modal');
+        const popup = document.getElementById(popupId);
+        popup.classList.add('is-active');
+    })
+});
+
+const closeBtn = document.querySelectorAll('.close');
+
+closeBtn.forEach(button => {
+    button.addEventListener('click', function() {
+        const popupId = button.getAttribute('data-modal');
+        const popup = document.getElementById(popupId);
+        popup.classList.remove('is-active');
+    })
+});
+
+window.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.popup');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.classList.remove('is-active');
+        }
+    });
+});

@@ -11,7 +11,7 @@ class IndexController extends Controller
 {
     public function welcome()
     {
-        $methods = Post::orderBy('sort')->where('type',1)->take(6)->get();
+        $methods = Post::orderBy('sort')->where('type',1)->take(3)->get();
         $question_answers = QuestionAnswer::orderBy('sort')->take(6)->get();
         $reasons = Post::orderBy('sort')->where('type',2)->get();
         return view('welcome', compact('methods','reasons','question_answers'));

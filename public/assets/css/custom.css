@@ -196,3 +196,47 @@
 .methods a{
     text-decoration: none;
 }
+
+.methods .btn{
+    width: 300px;
+}
+
+.scheme .object .helper.is-8 {
+    display: block;
+    top: 730px;
+    transform: translateX(100%) translateX(6px);
+}
+
+.scheme .object .helper.is-9 {
+    display: block;
+    top: 300px;
+    transform: translateX(calc(-100% + 25px));
+}
+
+.scheme .object .helper.is-10 {
+    display: block;
+    top: 520px;
+    transform: translateX(100%) translateX(6px);
+}
+
+
+@media (max-width: 991px) {
+    .scheme .object .helper.is-8 {
+        display: block;
+        top: 330px;
+        transform: translateX(100%) translateX(6px);
+    }
+
+    .scheme .object .helper.is-9 {
+        display: block;
+        top: 220px;
+        transform: translateX(calc(-100% + 25px));
+    }
+
+    .scheme .object .helper.is-10 {
+        display: block;
+        top: 470px;
+        transform: translateX(100%) translateX(6px);
+    }
+
+}
