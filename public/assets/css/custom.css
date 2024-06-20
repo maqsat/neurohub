@@ -240,3 +240,14 @@
     }
 
 }
+
+.diseases .accordion-button img {
+    width: 64px;
+    height: 64px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--light-gray);
+    margin-right: 10px;
+}
