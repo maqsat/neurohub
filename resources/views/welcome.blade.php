@@ -250,8 +250,8 @@
                 <a href="./assets/img/gallery-3.jpg" class="swiper-slide">
                     <img src="./assets/img/gallery-3.jpg" alt="">
                 </a>
-                <a href="./assets/img/gallery-4.jpg" class="swiper-slide">
-                    <img src="./assets/img/gallery-4.jpg" alt="">
+                <a href="./assets/img/gallery-4.png" class="swiper-slide">
+                    <img src="./assets/img/gallery-4.png" alt="">
                 </a>
             </div>
         </div>
