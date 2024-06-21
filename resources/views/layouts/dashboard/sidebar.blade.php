@@ -14,7 +14,7 @@
                     <a class="has-arrow" href="/posts?type=1" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Методы лечение</span></a>
                 </li>
                 <li class="two-column">
-                    <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Статьи и Новости</span></a>
+                    <a class="has-arrow" href="/services" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Услуги</span></a>
                 </li>
                 <li>
                     <a class="has-arrow " href="/posts?type=2" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Причина обращении</span></a>

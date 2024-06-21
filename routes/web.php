@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use App\Http\Controllers\OrderController;
 */
 
 Route::get('/', [IndexController::class, 'welcome'])->name('welcome');
-Route::get('/neurorehub', [IndexController::class, 'landing'])->name('landing');
+Route::get('/neurorehab', [IndexController::class, 'landing'])->name('landing');
 Route::get('/all-methods', [IndexController::class, 'allMethods'])->name('all-methods');
 Route::get('/methods/{slug}', [IndexController::class, 'showMethods'])->name('all-methods');
 Route::get('/methods/{slug}', [IndexController::class, 'showMethods'])->name('all-methods');
@@ -36,6 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/users',UserController::class);
     Route::resource('/question_answers',QuestionAnswerController::class);
     Route::resource('/orders',OrderController::class);
+    Route::resource('/services',ServiceController::class);
 
 
 });

@@ -12,9 +12,10 @@
             <!-- ============================================================== -->
             <div class="row page-titles">
                 <div class="col-md-6 col-8 align-self-center">
-                    <h3 class="text-themecolor m-b-0 m-t-0">Заявки</h3>
+                    <h3 class="text-themecolor m-b-0 m-t-0">Услуги</h3>
                 </div>
                 <div class="col-md-6 col-4 align-self-center">
+                    <a href="/services/create" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</a>
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -32,31 +33,24 @@
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>имя</th>
-                                        <th>телефон</th>
-                                        <th>причина</th>
-                                        <th>статус</th>
-                                        <th>Обработать</th>
+                                        <th>Наименование</th>
+                                        <th>Цена</th>
+                                        <th>Действие</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($list as $item)
                                         <tr>
                                             <td>{{ $item->id }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td>{{ $item->phone }}</td>
-                                            <td>{{ $item->text }}</td>
-                                            <td>@if($item->status != 1) Не обработан @else Обработан @endif</td>
+                                            <td>{{ $item->title }}</td>
+                                            <td>{{ $item->cost }}</td>
                                             <td class="actions">
-                                                @if($item->status != 1)
-                                                <form action="{{url('orders', [$item->id])}}" method="POST" style="display: inline;">
+                                                <a href="/services/{{ $item->id }}/edit" class="btn btn-success"><i class="mdi mdi-grease-pencil"></i></a>
+                                                <form action="{{url('services', [$item->id])}}" method="POST" style="display: inline;">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
-                                                    <button type="submit" class="btn btn-danger" onclick="return deleteAlert();"><i class="mdi mdi-check"></i></button>
+                                                    <button type="submit" class="btn btn-danger" onclick="return deleteAlert();"><i class="mdi mdi-delete"></i></button>
                                                 </form>
-                                                @else
-                                                    <button type="submit" class="btn btn-success" onclick="return deleteAlert();"><i class="mdi mdi-check"></i></button>
-                                                @endif
                                             </td>
                                         </tr>
                                     @endforeach

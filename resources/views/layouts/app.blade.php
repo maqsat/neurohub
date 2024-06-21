@@ -29,7 +29,7 @@
             <ul>
                 <li><a href="#about" class="text">О нас</a></li>
                 <li><a href="#diseases" class="text">К нам обращаются</a></li>
-                <li><a href="#methods" class="text">Как мы лечим</a></li>
+                <li><a href="/neurorehab" class="text">Как мы лечим</a></li>
                 <li><a href="#doctors" class="text">Наши врачи</a></li>
                 <li><a href="#reviews" class="text">Отзывы</a></li>
             </ul>

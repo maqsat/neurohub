@@ -251,3 +251,21 @@
     border: 1px solid var(--light-gray);
     margin-right: 10px;
 }
+
+
+.pricing{
+    background-color: #101F3C;
+}
+
+
+.pricing .title {
+    color: var(--white);
+}
+
+.pricing p {
+    color: var(--white);
+}
+
+.pricing-cards h3{
+    color: #212529 !important;
+}

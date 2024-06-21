@@ -13,9 +13,13 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $list = Post::paginate(30);
+        if (isset($request->type)){
+            $list = Post::where('type',$request->type)->paginate(30);
+        }
+        else $list = Post::paginate(30);
+
         return view('post.index', compact('list'));
     }
 
