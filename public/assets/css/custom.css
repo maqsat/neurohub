@@ -190,6 +190,10 @@
         overflow: hidden;
         margin-top: 16px;
     }
+
+    .diseases .accordion-button img {
+        object-fit: cover;
+    }
 }
 
 
@@ -239,18 +243,20 @@
         transform: translateX(100%) translateX(6px);
     }
 
+    .diseases .accordion-button img {
+        width: 64px;
+        height: 64px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid var(--light-gray);
+        margin-right: 10px;
+    }
+
 }
 
-.diseases .accordion-button img {
-    width: 64px;
-    height: 64px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--light-gray);
-    margin-right: 10px;
-}
+
 
 
 .pricing{
