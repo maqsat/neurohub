@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\Post;
 use App\Models\QuestionAnswer;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -21,8 +22,9 @@ class IndexController extends Controller
     {
         $methods = Post::orderBy('sort')->where('type',1)->get();
         $reasons = Post::orderBy('sort')->where('type',2)->take(6)->get();
+        $services = Service::orderBy('sort')->get();
 
-        return view('landing', compact('methods','reasons'));
+        return view('landing', compact('methods','reasons','services'));
 
     }
 

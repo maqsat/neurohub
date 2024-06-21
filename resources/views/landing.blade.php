@@ -423,18 +423,15 @@
             <h2 class="title text-4xl">Цены и услуги</h2>
             <p class="subtitle text-sm">В нашей клинике пациенты не переплачивают! Потому что получают результат уже от одного посещения.</p>
             <div class="pricing-cards">
+
+                @foreach($services as $item)
                 <div class="card">
-                    <span class="text text-5xl">Консультация главного врача</span>
-                    <h3 class="title text-2xl">25 000 тг</h3>
+                    <span class="text text-5xl">{{ $item->title }}</span>
+                    <h3 class="title text-2xl">{{ $item->cost }} тг</h3>
 
                     <a href="https://wa.me/77085550848?text=Здравствуйте,%20пишу%20из%20сайта%20neurorehab.kz" target="_blank" class="btn btn-primary text-base">Записаться на прием</a>
                 </div>
-                <div class="card">
-                    <span class="text text-5xl">Консультация врача реабилитолога </span>
-                    <h3 class="title text-2xl">15 000 тг</h3>
-
-                    <a href="https://wa.me/77085550848?text=Здравствуйте,%20пишу%20из%20сайта%20neurorehab.kz" target="_blank" class="btn btn-primary text-base">Записаться на прием</a>
-                </div>
+                @endforeach
             </div>
         </div>
 
