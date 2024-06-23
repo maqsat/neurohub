@@ -34,7 +34,7 @@
                 <li><a href="#reviews" class="text">Отзывы</a></li>
             </ul>
             <a href="https://wa.me/77085550848?text=Здравствуйте,%20пишу%20из%20сайта%20neurorehab.kz" class="btn btn-primary" target="_blank">Получить консультацию</a>
-            <button class="btn btn-close-menu"></button>
+            <button class="btn btn-close-menu" aria-label="Name"></button>
         </nav>
         <div class="menu-right">
             <a href="tel:+77085550848" class="tel text-2xl">+7 708 555 08-48</a>
