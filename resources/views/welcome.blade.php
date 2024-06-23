@@ -5,7 +5,7 @@
 <section class="hero" id="hero">
     <div class="container">
         <div class="left-block">
-            <img src="./assets/img/hero-0.png" alt="">
+            <img src="./assets/img/hero-0.png" alt="Главная изображение neurorehab">
         </div>
         <div class="right-block">
             <h1 class="title text-4xl">
@@ -116,7 +116,7 @@
                     <div id="method-collapse-{{ $item->id }}" class="accordion-collapse collapse @if($key == 0) show @endif" aria-labelledby="method-{{ $item->id }}" data-bs-parent="#methods-accordion">
                         <div class="accordion-body">
                             <img src="{{ $item->photo }}"  title="{{ $item->title }}"  alt="{{ $item->meta_keywords }}">
-                            <a href="/methods/{{ $item->url }}">
+                            <a href="/methods/{{ $item->url }}" aria-label="{{ $item->title }}">
                                 <h3 class="title text-4xl">{{ $item->title }}</h3>
                             </a>
                             <p class="text text-sm">
