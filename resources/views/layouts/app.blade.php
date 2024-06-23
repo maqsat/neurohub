@@ -192,7 +192,7 @@
 <script src="/assets/js/plugins/appleple-modal-video/jquery-modal-video.min.js"></script>
 <script src="/assets/js/plugins/imask/imask.min.js"></script>
 <script src="/assets/js/plugins/notify/notify.min.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.min.js"></script>
 
 
 
