@@ -81,7 +81,9 @@
             @foreach($reasons as $key => $item)
             <div class="item accordion-item">
                 <h2 class="accordion-header" id="disease-{{ $item->id }}">
-                    <button class="text text-lg accordion-button  @if($key != 0) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#disease-collapse-{{ $item->id }}" aria-expanded="@if($key == 0) true @else false @endif" aria-controls="disease-collapse-{{ $item->id }}">
+                    <button class="text text-lg accordion-button  @if($key != 0) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#disease-collapse-{{ $item->id }}"
+                            @if($key == 0) aria-expanded="true" @else aria-expanded="false" @endif
+                            aria-controls="disease-collapse-{{ $item->id }}">
                         <img src="/{{$item->photo}}" alt="">
                         <span>{{$item->title}}</span>
                     </button>
@@ -267,7 +269,8 @@
                 @foreach($question_answers as $key => $item)
                     <div class="item accordion-item">
                         <h2 class="accordion-header" id="faq-heading-{{$item->id}}">
-                            <button class="text-lg accordion-button @if($key != 2) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-{{$item->id}}" aria-expanded="@if($key == 3) true @else false @endif" aria-controls="faq-collapse-{{$item->id}}">
+                            <button class="text-lg accordion-button @if($key != 2) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-{{$item->id}}"
+                                    @if($key == 3) aria-expanded="true" @else aria-expanded="false" @endif aria-controls="faq-collapse-{{$item->id}}">
                                 {{ $item->question }}
                             </button>
                         </h2>
