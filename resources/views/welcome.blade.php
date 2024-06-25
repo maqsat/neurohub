@@ -139,50 +139,23 @@
         <h2 class="title text-4xl">Наши врачи</h2>
         <p class="subtitle text-sm">Вы можете записаться на консультацию с нашими специалистами</p>
         <div class="doctors-cards">
+
+            @foreach($doctors as $item)
             <div class="card">
                 <div class="info">
-                    <img src="./assets/img/doctor-1.png" alt="">
+                    <img src="{{ $item->photo }}" alt="">
                     <div class="price">
-                        <p class="text text-xs text-uppercase">Тюлебаева Арна Берикбековна</p>
-                        <p class="text text-2xl">Невролог, Магистр реабилитационных наук (University of Pittsburgh, USA)</p>
+                        <p class="text text-xs text-uppercase">{{ $item->name }}</p>
+                        <p class="text text-2xl">{{ $item->job_title }}</p>
                         <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%20Арне%20Берикбековне" class="btn btn-primary"  target="_blank">Записаться на прием</a>
                     </div>
                 </div>
                 <div class="description text-xs">
-                    <p>Арна Берикбековна более 19 лет занимается диагностикой и лечением неврологической патологии и патологии опорно-двигательного аппарата. Имеет большой опыт работы в неврологических отделениях, где оказывалась экстренная помощь, ведение инсультных больных в острый период, в ранние и поздние восстановительные сроки. Владеет всеми методами реабилитации, имеющими доказанную эффективность.</p>
+                    <p>{{ $item->text }}</p>
                 </div>
                 <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%20Арне%20Берикбековне" class="btn btn-primary"  target="_blank">Записаться на прием</a>
             </div>
-
-            <div class="card">
-                <div class="info">
-                    <img src="./assets/img/doctor-2.png" alt="">
-                    <div class="price">
-                        <p class="text text-xs text-uppercase">Калдыбаева Айтолкын Сериковна</p>
-                        <p class="text text-2xl">Врач-реабилитолог, Победительница Международного форума Asfen.Forum</p>
-                        <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%Айтолкын%20Сериковне" class="btn btn-primary" target="_blank">Записаться на прием</a>
-                    </div>
-                </div>
-                <div class="description text-xs">
-                    <p>Айтолкын Сериковна практикующий врач-реабилитолог, в работе руководствуется принципами доказательной медицины, постоянно совершенствует свои знания и повышает квалификацию в научной и клинической практике. Принимает взрослых и детей с болями в спине, в плече, с головокружением, состояниями после травм, грыж, операций и пост-инсультных пациентов. Победительница Международного форума “Asfen.Forum, новое поколение-2023” в секции: Реабилитология и спортивная медицина</p>
-                </div>
-                <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%Айтолкын%20Сериковне" class="btn btn-primary" target="_blank">Записаться на прием</a>
-            </div>
-
-            <div class="card">
-                <div class="info">
-                    <img src="./assets/img/doctor-3.jpeg" alt="">
-                    <div class="price">
-                        <p class="text text-xs text-uppercase">Куанышбаева Ардак Теналбайкызы</p>
-                        <p class="text text-2xl">Врач-Инструктор</p>
-                        <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%Айтолкын%20Сериковне" class="btn btn-primary" target="_blank">Записаться на прием</a>
-                    </div>
-                </div>
-                <div class="description text-xs">
-                    <p>КазНМУ им С. Д. Асфендиярова + множество зарубежных стажировок, мастер классов и выступлений на конференциях</p>
-                </div>
-                <a href="https://wa.me/77085550848?text=Здравствуйте,%20хочу%20записаться%к%Айтолкын%20Сериковне" class="btn btn-primary" target="_blank">Записаться на прием</a>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
