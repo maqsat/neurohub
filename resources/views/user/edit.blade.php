@@ -34,37 +34,58 @@
                     @endforeach
                     <div class="card">
                         <div class="card-block">
-                            <form action="{{url('posts', [$post->id])}}" method="POST" class="form-horizontal form-material" enctype="multipart/form-data">
+                            <form action="{{url('users', [$user->id])}}" method="POST" class="form-horizontal form-material" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 {{ method_field('PATCH') }}
+
+                                {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-md-12">Тип записи</label>
                                     <div class="col-md-12">
                                         <select class="form-control form-control-line select2" name="type">
-                                            <option>Выберите тип записи</option>
-                                            <option value="1" @if(old('type',$post->type) == 1) selected @endif>Методы лечение</option>
-                                            <option value="2" @if(old('type',$post->type) == 2) selected @endif>Причина обращении</option>
-                                            <option value="3" @if(old('type',$post->type) == 3) selected @endif>Статьи и Новости</option>
+                                            <option>Выберите категорию</option>
+                                            <option value="1" @if(old('type',$user->type) == 1) selected @endif>Врач</option>
+                                            <option value="2" @if(old('type',$user->type) == 2) selected @endif>Администратор сайта</option>
                                         </select>
-                                        @if ($errors->has('category_id'))
-                                            <span class="help-block text-danger"><small>{{ $errors->first('category_id') }}</small></span>
+                                        @if ($errors->has('type'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('type') }}</small></span>
                                         @endif
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-12">Наименование</label>
+                                    <label class="col-md-12">ФИО</label>
                                     <div class="col-md-12">
-                                        <input type="text" value="{{ old('title',$post->title) }}" name="title" class="form-control form-control-line">
-                                        @if ($errors->has('title'))
-                                            <span class="help-block text-danger"><small>{{ $errors->first('title') }}</small></span>
+                                        <input type="text" value="{{ old('name',$user->name) }}" name="name" class="form-control form-control-line">
+                                        @if ($errors->has('name'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('name') }}</small></span>
                                         @endif
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Текст</label>
+                                    <label class="col-md-12">Почта</label>
                                     <div class="col-md-12">
-                                        <textarea class="form-control form-control-lin"  name="text" rows="6"  id="editor">{{ old('text',$post->text) }}</textarea>
+                                        <input type="text" value="{{ old('email',$user->email) }}" name="email" class="form-control form-control-line">
+                                        @if ($errors->has('email'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('email') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-12">Должность и достижение</label>
+                                    <div class="col-md-12">
+                                        <textarea class="form-control form-control-lin"  name="job_title" rows="6"  id="editor">{{ old('job_title',$user->job_title) }}</textarea>
+                                    </div>
+                                    @if ($errors->has('job_title'))
+                                        <span class="help-block text-danger"><small>{{ $errors->first('job_title') }}</small></span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-12">Описание</label>
+                                    <div class="col-md-12">
+                                        <textarea class="form-control form-control-lin"  name="text" rows="6"  id="editor">{{ old('text', $user->text) }}</textarea>
                                     </div>
                                     @if ($errors->has('text'))
                                         <span class="help-block text-danger"><small>{{ $errors->first('text') }}</small></span>
@@ -74,7 +95,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Сортировка(порядок отображение на главной странице)</label>
                                     <div class="col-md-12">
-                                        <input type="text" value="{{ old('sort',$post->sort) }}" name="sort" class="form-control form-control-line">
+                                        <input type="text" value="{{ old('sort',$user->sort) }}" name="sort" class="form-control form-control-line">
                                         @if ($errors->has('sort'))
                                             <span class="help-block text-danger"><small>{{ $errors->first('sort') }}</small></span>
                                         @endif
@@ -82,27 +103,27 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-12">Картинка</label>
+                                    <label class="col-md-12">Фотография</label>
                                     <div class="col-md-12">
-
-                                        <input type="hidden" value="{{ $post->photo }}" name="photo">
+                                        <input type="hidden" value="{{ $user->photo }}" name="photo">
                                         <input type="file" name="photo" class="form-control form-control-line">
                                         @if ($errors->has('photo'))
                                             <span class="help-block text-danger"><small>{{ $errors->first('photo') }}</small></span>
                                         @endif
 
-                                        @if(isset($post->photo))
-                                            <img src="{{ asset($post->photo) }}" style=" width: 200px;padding: 10px; height: 150px;float: right;object-fit: contain;">
+                                        @if(isset($user->photo))
+                                            <img src="{{ asset($user->photo) }}" style=" width: 200px;padding: 10px; height: 150px;float: right;object-fit: contain;">
+                                        @endif
+                                        @if ($errors->has('photo'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('photo') }}</small></span>
                                         @endif
                                     </div>
                                 </div>
 
-
-
                                 <div class="form-group">
                                     <label class="col-md-12">Ключевые слово(для SEO, через запятое)</label>
                                     <div class="col-md-12">
-                                        <input type="text" value="{{ old('meta_keywords',$post->meta_keywords) }}" name="meta_keywords" class="form-control form-control-line">
+                                        <input type="text" value="{{ old('meta_keywords',$user->meta_keywords) }}" name="meta_keywords" class="form-control form-control-line">
                                         @if ($errors->has('meta_keywords'))
                                             <span class="help-block text-danger"><small>{{ $errors->first('meta_keywords') }}</small></span>
                                         @endif
@@ -112,19 +133,19 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Мини описание(для SEO)</label>
                                     <div class="col-md-12">
-                                        <input type="text" value="{{ old('meta_description',$post->meta_description) }}" name="meta_description" class="form-control form-control-line">
+                                        <input type="text" value="{{ old('meta_description',$user->meta_description) }}" name="meta_description" class="form-control form-control-line">
                                         @if ($errors->has('meta_description'))
                                             <span class="help-block text-danger"><small>{{ $errors->first('meta_description') }}</small></span>
                                         @endif
                                     </div>
                                 </div>
 
-
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <button class="btn btn-success" type="submit">Create</button>
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     </div>

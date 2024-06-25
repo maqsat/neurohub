@@ -15,7 +15,7 @@
                     <h3 class="text-themecolor m-b-0 m-t-0">Пользователи</h3>
                 </div>
                 <div class="col-md-6 col-4 align-self-center">
-                    <a href="/user/create" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</a>
+                    <a href="/users/create" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</a>
                 </div>
             </div>
             <!-- ============================================================== -->
