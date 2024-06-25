@@ -62,4 +62,10 @@ class IndexController extends Controller
 
     }
 
+    public function sitemap()
+    {
+        $methods = Post::orderBy('sort')->where('type',1)->get();
+        return  response()->view('sitemap',compact('methods'))->header('Content-Type', 'xml');
+    }
+
 }

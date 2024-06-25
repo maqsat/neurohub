@@ -27,6 +27,8 @@ Route::get('/methods/{slug}', [IndexController::class, 'showMethods'])->name('al
 Route::get('/methods/{slug}', [IndexController::class, 'showMethods'])->name('all-methods');
 Route::post('/order-create', [IndexController::class, 'addOrder'])->name('add-order');
 
+Route::get('/sitemap.xml', [IndexController::class, 'sitemap'])->name('sitemap');
+
 
 require __DIR__.'/auth.php';
 

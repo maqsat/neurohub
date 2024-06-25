@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /dashboard/
+Disallow: /index.html
+Disallow: /monster-admin/
+Crawl-delay: 5
+Sitemap: https://neurorehab.kz/sitemap.xml
+Host: www.neurorehab.kz/
