@@ -15,8 +15,6 @@ class UserController extends Controller
      */
     public function index()
     {
-        /*ALTER TABLE `users` ADD `type` INT NOT NULL AFTER `password`, ADD `job_title` VARCHAR(500) NOT NULL AFTER `type`, ADD `text` VARCHAR(500) NOT NULL AFTER `job_title`, ADD `sort` INT NOT NULL AFTER `text`, ADD `photo` VARCHAR(500) NOT NULL AFTER `sort`, ADD `meta_keywords` VARCHAR(100) NOT NULL AFTER `photo`, ADD `meta_description` VARCHAR(100) NOT NULL AFTER `meta_keywords`;
-        */
         $list = User::paginate(30);
         return view('user.index', compact('list'));
     }
@@ -65,7 +63,7 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => bcrypt('1230000009999'),
             'job_title' => $request->job_title,
-            'text' => $request->job_title,
+            'text' => $request->text,
             'sort' => $request->sort,
             'photo' => $request->photo,
             'meta_keywords' => $request->meta_keywords,
@@ -133,7 +131,7 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => bcrypt('1230000009999'),
             'job_title' => $request->job_title,
-            'text' => $request->job_title,
+            'text' => $request->text,
             'sort' => $request->sort,
             'photo' => $request->photo,
             'meta_keywords' => $request->meta_keywords,
@@ -141,7 +139,7 @@ class UserController extends Controller
         ]);
 
 
-        return redirect()->back()->with('status', 'Успешно изменена');
+        return redirect('/users')->with('status', 'Успешно добавлено');
     }
 
     /**
