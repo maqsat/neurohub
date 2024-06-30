@@ -183,21 +183,21 @@
 </footer>
 
 
-<script src="/assets/js/plugins/lightgallery/lg-thumbnail.min.js"></script>
-<script src="/assets/js/plugins/lightgallery/lg-zoom.min.js"></script>
-<script src="/assets/js/plugins/lightgallery/lightgallery.min.js"></script>
-<script src="/assets/js/plugins/swiper/swiper-bundle.min.js"></script>
-<script src="/assets/js/plugins/bootstrap/bootstrap.min.js"></script>
-<script src="/assets/js/plugins/jquery/jquery-3.6.0.min.js"></script>
-<script src="/assets/js/plugins/appleple-modal-video/jquery-modal-video.min.js"></script>
-<script src="/assets/js/plugins/imask/imask.min.js"></script>
-<script src="/assets/js/plugins/notify/notify.min.js"></script>
-<script src="/assets/js/main.min.js"></script>
+<script src="/assets/js/plugins/lightgallery/lg-thumbnail.min.js" defer></script>
+<script src="/assets/js/plugins/lightgallery/lg-zoom.min.js" defer></script>
+<script src="/assets/js/plugins/lightgallery/lightgallery.min.js" defer></script>
+<script src="/assets/js/plugins/swiper/swiper-bundle.min.js" defer></script>
+<script src="/assets/js/plugins/bootstrap/bootstrap.min.js" defer></script>
+<script src="/assets/js/plugins/jquery/jquery-3.6.0.min.js" defer></script>
+<script src="/assets/js/plugins/appleple-modal-video/jquery-modal-video.min.js" defer></script>
+<script src="/assets/js/plugins/imask/imask.min.js" defer></script>
+<script src="/assets/js/plugins/notify/notify.min.js" defer></script>
+<script src="/assets/js/main.min.js" defer></script>
 
 
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script type="text/javascript" defer>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -214,7 +214,7 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/97385880" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPMXTK74NH"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPMXTK74NH" defer></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
