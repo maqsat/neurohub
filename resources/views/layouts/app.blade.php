@@ -176,7 +176,7 @@
                 <a href="#" class="text text-sm">Правила сервиса</a>
                 <a href="#" class="text text-sm">Политика конфиденциальности</a>
             </div>
-            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
             <div class="elfsight-app-7d74b113-21d0-4c28-b7cd-45b2740bb06d" data-elfsight-app-lazy style="position: absolute"></div>
         </div>
     </div>
@@ -193,7 +193,7 @@
 <script src="/assets/js/plugins/imask/imask.min.js" defer></script>
 <script src="/assets/js/plugins/notify/notify.min.js" defer></script>
 <script src="/assets/js/main.min.js" defer></script>
-
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 
 
 <!-- Yandex.Metrika counter -->
