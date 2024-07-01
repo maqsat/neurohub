@@ -6,6 +6,8 @@
     @yield('seo_side')
 
     <link rel="shortcut icon" href="/assets/img/logo-favicon.svg" type="image/x-icon">
+    <link rel="icon" href="/assets/img/logo-favicon.svg" type="image/x-icon">
+
     <link rel="stylesheet" href="/assets/css/style.css?ver=2">
     <link rel="stylesheet" href="/assets/css/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/plugins/swiper/swiper-bundle.min.css">
@@ -197,7 +199,7 @@
 
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" defer>
+<script async type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -214,7 +216,7 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/97385880" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPMXTK74NH" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPMXTK74NH"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -222,6 +224,7 @@
 
     gtag('config', 'G-LPMXTK74NH');
 </script>
+
 
 </body>
 </html>
