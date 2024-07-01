@@ -5,7 +5,7 @@
 <section class="hero" id="hero">
     <div class="container">
         <div class="left-block">
-            <img src="./assets/img/hero-0.png" alt="Главная изображение neurorehab">
+            <img src="/assets/img/hero-0.png" alt="Главная изображение neurorehab">
         </div>
         <div class="right-block">
             <h1 class="title text-4xl">

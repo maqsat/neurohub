@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/assets/css/plugins/images/loading.gif">
     <link rel="stylesheet" href="/assets/css/plugins/appleple-modal-video/modal-video.min.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
+
+    <link rel="preload" as="image" href="/assets/img/hero-0.png" fetchpriority="high">
 </head>
 <body>
 <header class="header">
