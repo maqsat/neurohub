@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/assets/img/logo-favicon.svg" type="image/x-icon">
     <link rel="icon" href="/assets/img/logo-favicon.svg" type="image/x-icon">
 
-    <link rel="stylesheet" href="/assets/css/style.css?ver=3">
+    <link rel="stylesheet" href="/assets/css/style.css?ver=4">
     <link rel="stylesheet" href="/assets/css/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/plugins/fontawesome/font-awesome.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/assets/css/plugins/lightgallery/lightgallery-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/plugins/images/loading.gif">
     <link rel="stylesheet" href="/assets/css/plugins/appleple-modal-video/modal-video.min.css">
-    <link rel="stylesheet" href="/assets/css/custom.css?ver=3">
+    <link rel="stylesheet" href="/assets/css/custom.css?ver=4">
 
     <link rel="preload" as="image" href="/assets/img/hero-0.png" fetchpriority="high">
 </head>
