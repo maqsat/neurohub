@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/assets/css/plugins/lightgallery/lightgallery-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/plugins/images/loading.gif">
     <link rel="stylesheet" href="/assets/css/plugins/appleple-modal-video/modal-video.min.css">
-    <link rel="stylesheet" href="/assets/css/custom.css?ver=4">
+    <link rel="stylesheet" href="/assets/css/custom.css?ver=5">
 
     <link rel="preload" as="image" href="/assets/img/hero-0.png" fetchpriority="high">
 </head>
