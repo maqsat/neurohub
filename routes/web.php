@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\OptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/question_answers',QuestionAnswerController::class);
     Route::resource('/orders',OrderController::class);
     Route::resource('/services',ServiceController::class);
-
+    Route::resource('/option',OptionController::class);
 
 });

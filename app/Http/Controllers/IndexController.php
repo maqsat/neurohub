@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Option;
 use App\Models\Order;
 use App\Models\Post;
 use App\Models\QuestionAnswer;
@@ -17,7 +18,8 @@ class IndexController extends Controller
         $question_answers = QuestionAnswer::orderBy('sort')->take(6)->get();
         $reasons = Post::orderBy('sort')->where('type',2)->get();
         $doctors = User::orderBy('sort')->where('type',1)->get();
-        return view('welcome', compact('methods','reasons','question_answers','doctors'));
+        $option = Option::orderBy('sort')->get();
+        return view('welcome', compact('methods','reasons','question_answers','doctors','option'));
     }
 
     public function landing()
