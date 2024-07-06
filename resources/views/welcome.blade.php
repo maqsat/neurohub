@@ -5,7 +5,7 @@
 <section class="hero" id="hero">
     <div class="container">
         <div class="left-block">
-            <img src="/assets/img/hero-0.png" alt="Главная изображение neurorehab">
+            <img src="/assets/img/hero-0.png" width="406" height="352" alt="Клиника реабилитологии в Алматы neurorehab">
         </div>
         <div class="right-block">
             <h1 class="title text-4xl">
@@ -151,7 +151,7 @@
         <h2 class="title text-4xl">Отзывы наших пациентов</h2>
         <p class="subtitle text-sm">Мы будем благодарны за ваш отзыв в 2GIS</p>
         <div class="card -gis">
-            <img src="./assets/img/2gis.png" alt="">
+            <img src="./assets/img/2gis.png" width="378" height="56" alt="Отзывы Neuro Rehab Clinic ">
             <a href="https://2gis.kz/almaty/firm/70000001085335478?m=76.893978%2C43.247005%2F17.81" target="_blank" class="text text-base">Оставить отзыв</a>
         </div>
         <div class="swiper reviews-swiper">
