@@ -196,7 +196,7 @@
 <script src="/assets/js/plugins/appleple-modal-video/jquery-modal-video.min.js" defer></script>
 <script src="/assets/js/plugins/imask/imask.min.js" defer></script>
 <script src="/assets/js/plugins/notify/notify.min.js" defer></script>
-<script src="/assets/js/main.min.js" defer></script>
+<script src="/assets/js/main.min.js"></script>
 <script src="/assets/js/elfsight.min.js" data-use-service-core defer></script>
 
 
