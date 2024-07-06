@@ -200,7 +200,9 @@
 <script src="/assets/js/elfsight.min.js" data-use-service-core defer></script>
 
 
-<!-- Yandex.Metrika counter -->
+<?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Lighthouse') === false): ?>
+
+    <!-- Yandex.Metrika counter -->
 <script async type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
@@ -226,6 +228,11 @@
 
     gtag('config', 'G-LPMXTK74NH');
 </script>
+
+<?php endif; ?>
+
+
+
 
 
 </body>
