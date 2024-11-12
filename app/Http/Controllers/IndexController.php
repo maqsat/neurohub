@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+
     public function welcome()
     {
         $methods = Post::orderBy('sort')->where('type',1)->take(3)->get();
@@ -22,27 +23,26 @@ class IndexController extends Controller
         return view('welcome', compact('methods','reasons','question_answers','doctors','option'));
     }
 
-    public function landing()
+
+    public function showProduct($slug)
     {
-        $methods = Post::orderBy('sort')->where('type',1)->get();
-        $reasons = Post::orderBy('sort')->where('type',2)->take(6)->get();
-        $services = Service::orderBy('sort')->get();
-
-        return view('landing', compact('methods','reasons','services'));
-
+        $post = Post::where('url',$slug)->first();
+        return view('post.show', compact('post'));
     }
 
-    public function allMethods()
+
+    public function showCategory($slug)
     {
-        $methods = Post::orderBy('sort')->where('type',1)->get();
-        return view('index.all-methods', compact('methods'));
+        $category = Service::where('url',$slug)->first();
+        $posts = Post::where('type',$category->id)->get();
+        return view('service.show', compact('posts'));
     }
 
-    public function showMethods($slug)
-    {
-        $method = Post::where('url',$slug)->first();
-        return view('post.show', compact('method'));
-    }
+
+
+    /****** OLD Methods
+    ********/
+
 
     public function addOrder(Request $request)
     {
@@ -52,16 +52,26 @@ class IndexController extends Controller
             'name' => 'required',
         ]);
 
-
         Order::create([
             'phone' => $request->phone,
             'name' => $request->name,
             'text' => $request->text,
         ]);
 
-
         return view('thank_you_page');
 
+    }
+
+
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contact()
+    {
+        return view('contact');
     }
 
     public function sitemap()

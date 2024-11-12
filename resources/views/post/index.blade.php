@@ -12,7 +12,7 @@
             <!-- ============================================================== -->
             <div class="row page-titles">
                 <div class="col-md-6 col-8 align-self-center">
-                    <h3 class="text-themecolor m-b-0 m-t-0">Методы лечении</h3>
+                    <h3 class="text-themecolor m-b-0 m-t-0">Товары</h3>
                 </div>
                 <div class="col-md-6 col-4 align-self-center">
                     <a href="/posts/create" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</a>
@@ -34,6 +34,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Наименование</th>
+                                        <th>Цена</th>
                                         <th>Действие</th>
                                     </tr>
                                     </thead>
@@ -42,6 +43,7 @@
                                         <tr>
                                             <td>{{ $item->id }}</td>
                                             <td>{{ $item->title }}</td>
+                                            <td>{{ $item->cost }}</td>
                                             <td class="actions">
                                                 <a href="/posts/{{ $item->id }}" target="_blank" class="btn btn-info"><i class="mdi mdi-eye"></i></a>
                                                 <a href="/posts/{{ $item->id }}/edit" class="btn btn-success"><i class="mdi mdi-grease-pencil"></i></a>

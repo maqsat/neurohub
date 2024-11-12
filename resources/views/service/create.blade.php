@@ -48,19 +48,24 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Цена</label>
+                                <label class="col-md-12">Родительская категория</label>
                                 <div class="col-md-12">
-                                    <input type="text" value="{{ old('cost') }}" name="cost" class="form-control form-control-line">
+                                    <select class="form-control form-control-line select2"  name="parent_id">
+                                        @foreach(\App\Models\Service::where('parent_id',0)->get() as $item)
+                                            <option value="{{ $item->id }}">{{ $item->title }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
-                                @if ($errors->has('answer'))
-                                    <span class="help-block text-danger"><small>{{ $errors->first('answer') }}</small></span>
+                                @if ($errors->has('parent_id'))
+                                    <span class="help-block text-danger"><small>{{ $errors->first('parent_id') }}</small></span>
                                 @endif
                             </div>
+
 
                             <div class="form-group">
                                 <label class="col-md-12">Сортировка(порядок отображение на главной странице)</label>
                                 <div class="col-md-12">
-                                    <input type="number" value="{{ old('sort') }}" name="sort" class="form-control form-control-line">
+                                    <input type="number" value="{{ old('sort', $last_sort->id+1) }}" name="sort" class="form-control form-control-line">
                                     @if ($errors->has('sort'))
                                         <span class="help-block text-danger"><small>{{ $errors->first('sort') }}</small></span>
                                     @endif

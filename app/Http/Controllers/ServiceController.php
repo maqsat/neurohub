@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ServiceController extends Controller
 {
@@ -14,7 +15,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $list = Service::paginate(30);
+        $list = Service::where('parent_id','!=',0)->paginate(100);
         return view('service.index', compact('list'));
     }
 
@@ -25,7 +26,9 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('service.create');
+        $last_sort = Service::orderBy('id','desc')->first();
+
+        return view('service.create', compact('last_sort'));
     }
 
     /**
@@ -38,14 +41,15 @@ class ServiceController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'cost' => 'required',
+            'parent_id' => 'required',
             'sort' => 'required',
         ]);
 
 
         Service::create([
             'title' => $request->title,
-            'cost' => $request->cost,
+            'url' => Str::slug($request->title, '-'),
+            'parent_id' => $request->parent_id,
             'sort' => $request->sort,
         ]);
 
@@ -86,14 +90,15 @@ class ServiceController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'cost' => 'required',
+            'parent_id' => 'required',
             'sort' => 'required',
         ]);
 
 
         $service->update([
             'title' => $request->title,
-            'cost' => $request->cost,
+            'url' => Str::slug($request->title, '-'),
+            'parent_id' => $request->parent_id,
             'sort' => $request->sort,
         ]);
 

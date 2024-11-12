@@ -48,12 +48,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Текст</label>
+                                    <label class="col-md-12">Родительская категория</label>
                                     <div class="col-md-12">
-                                        <input type="text" value="{{ old('cost',$service->cost) }}" name="cost" class="form-control form-control-line">
+                                        <select class="form-control form-control-line select2"  name="parent_id">
+                                            @foreach(\App\Models\Service::where('parent_id',0)->get() as $item)
+                                                <option value="{{ $item->id }}">{{ $item->title }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
-                                    @if ($errors->has('cost'))
-                                        <span class="help-block text-danger"><small>{{ $errors->first('cost') }}</small></span>
+                                    @if ($errors->has('parent_id'))
+                                        <span class="help-block text-danger"><small>{{ $errors->first('parent_id') }}</small></span>
                                     @endif
                                 </div>
 

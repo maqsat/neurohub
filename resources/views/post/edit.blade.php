@@ -41,10 +41,9 @@
                                     <label class="col-md-12">Тип записи</label>
                                     <div class="col-md-12">
                                         <select class="form-control form-control-line select2" name="type">
-                                            <option>Выберите тип записи</option>
-                                            <option value="1" @if(old('type',$post->type) == 1) selected @endif>Методы лечение</option>
-                                            <option value="2" @if(old('type',$post->type) == 2) selected @endif>Причина обращении</option>
-                                            <option value="3" @if(old('type',$post->type) == 3) selected @endif>Статьи и Новости</option>
+                                            @foreach(\App\Models\Service::where('parent_id','!=',0)->get() as $item)
+                                                <option @if(old('type',$post->type) == 3) selected @endif value="{{ $item->id }}">{{ $item->title }}</option>
+                                            @endforeach
                                         </select>
                                         @if ($errors->has('category_id'))
                                             <span class="help-block text-danger"><small>{{ $errors->first('category_id') }}</small></span>
@@ -62,7 +61,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Текст</label>
+                                    <label class="col-md-12">Цена</label>
+                                    <div class="col-md-12">
+                                        <input type="number" value="{{ old('cost',$post->cost) }}" name="cost" class="form-control form-control-line">
+                                        @if ($errors->has('cost'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('cost') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Описание</label>
                                     <div class="col-md-12">
                                         <textarea class="form-control form-control-lin"  name="text" rows="6"  id="editor">{{ old('text',$post->text) }}</textarea>
                                     </div>
@@ -70,6 +78,74 @@
                                         <span class="help-block text-danger"><small>{{ $errors->first('text') }}</small></span>
                                     @endif
                                 </div>
+
+
+
+                                <div class="form-group">
+                                    <label class="col-md-12">Модель</label>
+                                    <div class="col-md-12">
+                                        <input type="text" value="{{ old('model',$post->model) }}" name="model" class="form-control form-control-line">
+                                        @if ($errors->has('model'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('model') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Материал</label>
+                                    <div class="col-md-12">
+                                        <input type="text" value="{{ old('material',$post->material) }}" name="material" class="form-control form-control-line">
+                                        @if ($errors->has('material'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('material') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Цвет</label>
+                                    <div class="col-md-12">
+                                        <input type="text" value="{{ old('color',$post->color) }}" name="color" class="form-control form-control-line">
+                                        @if ($errors->has('color'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('color') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Рост</label>
+                                    <div class="col-md-12">
+                                        <input type="text" value="{{ old('height',$post->height) }}" name="height" class="form-control form-control-line">
+                                        @if ($errors->has('height'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('height') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Размеры</label>
+                                    <div class="col-md-12">
+                                        <input type="text" value="{{ old('size',$post->size) }}" name="size" class="form-control form-control-line">
+                                        @if ($errors->has('size'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('size') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Сезон</label>
+                                    <div class="col-md-12">
+                                        <input type="text" value="{{ old('season',$post->season) }}" name="season" class="form-control form-control-line">
+                                        @if ($errors->has('season'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('season') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Защита</label>
+                                    <div class="col-md-12">
+                                        <input type="text" value="{{ old('protection',$post->protection) }}" name="protection" class="form-control form-control-line">
+                                        @if ($errors->has('protection'))
+                                            <span class="help-block text-danger"><small>{{ $errors->first('protection') }}</small></span>
+                                        @endif
+                                    </div>
+                                </div>
+
+
 
                                 <div class="form-group">
                                     <label class="col-md-12">Сортировка(порядок отображение на главной странице)</label>

@@ -22,10 +22,11 @@ use App\Http\Controllers\OptionController;
 */
 
 Route::get('/', [IndexController::class, 'welcome'])->name('welcome');
-Route::get('/neurorehab', [IndexController::class, 'landing'])->name('landing');
-Route::get('/all-methods', [IndexController::class, 'allMethods'])->name('all-methods');
-Route::get('/methods/{slug}', [IndexController::class, 'showMethods'])->name('all-methods');
-Route::get('/methods/{slug}', [IndexController::class, 'showMethods'])->name('all-methods');
+Route::get('/product/{slug}', [IndexController::class, 'showProduct'])->name('product');
+Route::get('/catalog/{slug}', [IndexController::class, 'showCategory'])->name('category');
+Route::get('/about', [IndexController::class, 'about'])->name('about');
+Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
+
 Route::post('/order-create', [IndexController::class, 'addOrder'])->name('add-order');
 
 Route::get('/sitemap.xml', [IndexController::class, 'sitemap'])->name('sitemap');
